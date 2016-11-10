@@ -1,6 +1,6 @@
 use_frameworks!
 target 'SubscriptionMonitor' do
-  pod 'SubscriptionManager', :path => '../'
+  pod 'SubscriptionMonitor', :path => '../'
 end
  
 post_install do |installer|

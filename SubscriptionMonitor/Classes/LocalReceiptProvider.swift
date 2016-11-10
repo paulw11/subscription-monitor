@@ -1,6 +1,6 @@
 //
 //  LocalReceiptProvider.swift
-//  SubscriptionManager
+//  SubscriptioMonitor
 //
 //  Created by Paul Wilkinson on 4/11/16.
 //  Copyright © 2016 Paul Wilkinson. All rights reserved.
@@ -40,7 +40,7 @@ public class LocalReceiptProvider: NSObject, ReceiptProvider {
             }
             
         } else {
-            handler(nil,SubscriptionManagerError.noReceiptAvailable(rootError: nil))
+            handler(nil,SubscriptionMonitorError.noReceiptAvailable(rootError: nil))
             self.handler = nil
         }
     }
@@ -53,7 +53,7 @@ extension LocalReceiptProvider: SKRequestDelegate {
     }
     
     public func request(_ request: SKRequest, didFailWithError error: Error) {
-        let receiptError = SubscriptionManagerError.noReceiptAvailable(rootError:error)
+        let receiptError = SubscriptionMonitorError.noReceiptAvailable(rootError:error)
         self.handler?(nil,receiptError)
         self.handler = nil
         self.receiptRefreshAttemped = false     // Try again next time

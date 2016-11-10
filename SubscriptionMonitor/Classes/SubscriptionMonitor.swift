@@ -1,6 +1,6 @@
 //
-//  SubscriptionManager.swift
-//  SubscriptionManager
+//  SubscriptionMonitor.swift
+//  SubscriptionMonitor
 //
 //  Created by Paul Wilkinson on 3/11/16.
 //  Copyright © 2016 Paul Wilkinson. All rights reserved.
@@ -9,13 +9,13 @@
 import Foundation
 import StoreKit
 
-/// SubscriptionManager provides details of valid subscriptions
+/// SubscriptionMonitor provides details of valid subscriptions
 
-public class SubscriptionManager: NSObject {
+public class SubscriptionMonitor: NSObject {
     
     public typealias Subscriptions = [ProductGroup:Subscription]
     
-    public typealias SubscriptionManagerCallback = (Receipt?, Subscriptions?, Error?) -> (Void)
+    public typealias SubscriptionMonitorCallback = (Receipt?, Subscriptions?, Error?) -> (Void)
     
     /// Subscription refresh interval (seconds)
     var refreshInterval: Double {
@@ -32,8 +32,8 @@ public class SubscriptionManager: NSObject {
     
     var lastValidationTime: Date?
     
-    static let SubscriptionManagerRefreshNotification = Notification.Name("SubscriptionManagerRefreshNotification")
-    static let SubscriptionManagerReceiptValidationFailed = Notification.Name("SubscriptionManagerReceiptValidationFailed")
+    static let SubscriptionMonitorRefreshNotification = Notification.Name("SubscriptionMonitorRefreshNotification")
+    static let SubscriptionMonitorReceiptValidationFailed = Notification.Name("SubscriptionMonitorReceiptValidationFailed")
     
     var activeSubscriptions: Subscriptions? {
         get {
@@ -71,7 +71,7 @@ public class SubscriptionManager: NSObject {
     
     fileprivate var activeSubs:Subscriptions?
     
-    fileprivate var receiptCallback: SubscriptionManagerCallback?
+    fileprivate var receiptCallback: SubscriptionMonitorCallback?
     
     /**
      initialise
@@ -79,7 +79,7 @@ public class SubscriptionManager: NSObject {
      - Parameter validationEndpoint: The server URL that is called to validate the receipts
      - Parameter refreshInterval: The receipt refresh refreshInterval
      - Parameter useSandbox: `true` if the receipt should be validated against the Apple useSandbox
-     - Returns a new SubscriptionManager
+     - Returns a new SubscriptionMonitor
      */
     
     
@@ -118,7 +118,7 @@ public class SubscriptionManager: NSObject {
         self.refreshSubscriptions()
     }
     
-    public func setUpdateCallback(_ callback:@escaping SubscriptionManagerCallback) {
+    public func setUpdateCallback(_ callback:@escaping SubscriptionMonitorCallback) {
         self.receiptCallback = callback
     }
     
@@ -141,17 +141,17 @@ public class SubscriptionManager: NSObject {
         
         self.receiptProvider.getReceipt { (data, error) -> (Void) in
             guard error == nil, let receiptData = data else {
-                let validatorError = SubscriptionManagerError.noReceiptAvailable(rootError: error)
-                NotificationCenter.default.post(name: SubscriptionManager.SubscriptionManagerReceiptValidationFailed, object: self, userInfo: ["Error":validatorError])
+                let validatorError = SubscriptionMonitorError.noReceiptAvailable(rootError: error)
+                NotificationCenter.default.post(name: SubscriptionMonitor.SubscriptionMonitorReceiptValidationFailed, object: self, userInfo: ["Error":validatorError])
                 self.receiptCallback?(nil,nil,validatorError)
                 return
             }
             
-            self.validator.validate(receipt: receiptData, forSubscriptionManager:self, completion: { (receipt, error) -> (Void) in
+            self.validator.validate(receipt: receiptData, forSubscriptionMonitor:self, completion: { (receipt, error) -> (Void) in
                 
                 guard error == nil, let validatedReceipt = receipt else {
-                    let validatorError = SubscriptionManagerError.validatorError(rootError: error)
-                    NotificationCenter.default.post(name: SubscriptionManager.SubscriptionManagerReceiptValidationFailed, object: self, userInfo: ["Error":validatorError])
+                    let validatorError = SubscriptionMonitorError.validatorError(rootError: error)
+                    NotificationCenter.default.post(name: SubscriptionMonitor.SubscriptionMonitorReceiptValidationFailed, object: self, userInfo: ["Error":validatorError])
                     self.receiptCallback?(nil,nil,validatorError)
                     return
                 }
@@ -162,11 +162,11 @@ public class SubscriptionManager: NSObject {
                 do {
                     try self.process(validatedReceipt)
                     self.receiptCallback?(self.receipt,self.activeSubs,nil)
-                    NotificationCenter.default.post(name: SubscriptionManager.SubscriptionManagerRefreshNotification, object: self, userInfo:nil)
+                    NotificationCenter.default.post(name: SubscriptionMonitor.SubscriptionMonitorRefreshNotification, object: self, userInfo:nil)
                 } catch {
                     self.receiptCallback?(nil,nil,error)
-                    let validatorError = SubscriptionManagerError.validatorError(rootError: error)
-                    NotificationCenter.default.post(name: SubscriptionManager.SubscriptionManagerReceiptValidationFailed, object: self, userInfo: ["Error":validatorError])
+                    let validatorError = SubscriptionMonitorError.validatorError(rootError: error)
+                    NotificationCenter.default.post(name: SubscriptionMonitor.SubscriptionMonitorReceiptValidationFailed, object: self, userInfo: ["Error":validatorError])
                 }
                 
             })
@@ -192,7 +192,7 @@ public class SubscriptionManager: NSObject {
             for inapp in latestInApp {
                 if self.isActive(inApp: inapp) {
                     guard let potentialProduct = self.products[inapp.productId] else {
-                        throw SubscriptionManagerError.invalidProduct
+                        throw SubscriptionMonitorError.invalidProduct
                     }
                     if let group = productsDict[inapp.productId] {
                         if let currentProduct = activeProducts[group] {
@@ -203,7 +203,7 @@ public class SubscriptionManager: NSObject {
                             activeProducts[group] = Subscription(inAppReceipt:inapp, product: potentialProduct)
                         }
                     } else {
-                        throw SubscriptionManagerError.invalidProduct
+                        throw SubscriptionMonitorError.invalidProduct
                     }
                 }
             }

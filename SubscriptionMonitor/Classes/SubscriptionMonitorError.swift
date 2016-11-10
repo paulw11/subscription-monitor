@@ -1,6 +1,6 @@
 //
-//  SubscriptionManagerError.swift
-//  SubscriptionManager
+//  SubscriptionMonitorError.swift
+//  SubscriptionMonitor
 //
 //  Created by Paul Wilkinson on 4/11/16.
 //  Copyright © 2016 Paul Wilkinson. All rights reserved.
@@ -9,7 +9,7 @@
 import Foundation
 
 
-public enum SubscriptionManagerError: Error {
+public enum SubscriptionMonitorError: Error {
     
     case noReceiptAvailable(rootError: Error?)
     case validatorError(rootError: Error?)

@@ -18,15 +18,15 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-SubscriptionManager automates the tasks required to validate in-app purchase receipts for auto-renewing subscriptions.
+SubscriptionMonitor automates the tasks required to validate in-app purchase receipts for auto-renewing subscriptions.
 It will periodically refresh the application receipt and validate it against your server.  It will then deliver an NSNotification (and optionally invoke a closure) to let your app know that the receipt has been refreshed and that it should check for changes in subscriptions.
                        DESC
 
-  s.homepage         = 'https://github.com/paulw11/SubscriptionMonitor'
+  s.homepage         = 'https://github.com/paulw11/subscription-monitor'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'paulw' => 'paulw@wilko.me' }
-  s.source           = { :git => 'https://github.com/paulw11/SubscriptionMonitor.git', :tag => s.version.to_s }
+  s.source           = { :git => 'https://github.com/paulw11/subscription-monitor.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/paulwilko'
 
   s.ios.deployment_target = '9.0'

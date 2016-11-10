@@ -13,16 +13,16 @@
 		BB9D39BC1DD534C200AB136D /* Subscription.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB9D39AF1DD534C200AB136D /* Subscription.swift */; };
 		BB9D39BD1DD534C200AB136D /* FreeProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB9D39B01DD534C200AB136D /* FreeProduct.swift */; };
 		BB9D39BE1DD534C200AB136D /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB9D39B11DD534C200AB136D /* Product.swift */; };
-		BB9D39BF1DD534C200AB136D /* SubscriptionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB9D39B21DD534C200AB136D /* SubscriptionManager.swift */; };
+		BB9D39BF1DD534C200AB136D /* SubscriptionMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB9D39B21DD534C200AB136D /* SubscriptionMonitor.swift */; };
 		BB9D39C01DD534C200AB136D /* LocalReceiptProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB9D39B31DD534C200AB136D /* LocalReceiptProvider.swift */; };
 		BB9D39C11DD534C200AB136D /* SimpleReceiptValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB9D39B41DD534C200AB136D /* SimpleReceiptValidator.swift */; };
-		BB9D39C21DD534C200AB136D /* SubscriptionManagerError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB9D39B51DD534C200AB136D /* SubscriptionManagerError.swift */; };
+		BB9D39C21DD534C200AB136D /* SubscriptionMonitorError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB9D39B51DD534C200AB136D /* SubscriptionMonitorError.swift */; };
 		BB9D39C31DD534C200AB136D /* ReceiptValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB9D39B61DD534C200AB136D /* ReceiptValidator.swift */; };
 		BB9D39C41DD534C200AB136D /* InAppReceipt.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB9D39B71DD534C200AB136D /* InAppReceipt.swift */; };
 		BB9D39C51DD534C200AB136D /* Receipt.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB9D39B81DD534C200AB136D /* Receipt.swift */; };
 		BB9D39C61DD534C200AB136D /* ReceiptProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB9D39B91DD534C200AB136D /* ReceiptProvider.swift */; };
 		BB9D39C71DD534C200AB136D /* ProductGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB9D39BA1DD534C200AB136D /* ProductGroup.swift */; };
-		BB9D39C81DD534C200AB136D /* SubscriptionManager.h in Headers */ = {isa = PBXBuildFile; fileRef = BB9D39BB1DD534C200AB136D /* SubscriptionManager.h */; };
+		BB9D39C81DD534C200AB136D /* SubscriptionMonitor.h in Headers */ = {isa = PBXBuildFile; fileRef = BB9D39BB1DD534C200AB136D /* SubscriptionMonitor.h */; };
 		C1D5CC1E2964396A64CB8F7A0E054D52 /* SubscriptionMonitor-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D7EEA3FCA7A62676D8B4B5F8FCFD5149 /* SubscriptionMonitor-dummy.m */; };
 		D84ED636D6B3783F95DC9272AC015490 /* SubscriptionMonitor-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D5D2442CE41BE720663D3A350453DE95 /* SubscriptionMonitor-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E7D7074F26C82CA3C330564FF0CEABD0 /* Pods-SubscriptionMonitor_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = DB0603E30CEA69F5EB8DFB282DC512E3 /* Pods-SubscriptionMonitor_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -51,16 +51,16 @@
 		BB9D39AF1DD534C200AB136D /* Subscription.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Subscription.swift; sourceTree = "<group>"; };
 		BB9D39B01DD534C200AB136D /* FreeProduct.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FreeProduct.swift; sourceTree = "<group>"; };
 		BB9D39B11DD534C200AB136D /* Product.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
-		BB9D39B21DD534C200AB136D /* SubscriptionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubscriptionManager.swift; sourceTree = "<group>"; };
+		BB9D39B21DD534C200AB136D /* SubscriptionMonitor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubscriptionMonitor.swift; sourceTree = "<group>"; };
 		BB9D39B31DD534C200AB136D /* LocalReceiptProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalReceiptProvider.swift; sourceTree = "<group>"; };
 		BB9D39B41DD534C200AB136D /* SimpleReceiptValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleReceiptValidator.swift; sourceTree = "<group>"; };
-		BB9D39B51DD534C200AB136D /* SubscriptionManagerError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubscriptionManagerError.swift; sourceTree = "<group>"; };
+		BB9D39B51DD534C200AB136D /* SubscriptionMonitorError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubscriptionMonitorError.swift; sourceTree = "<group>"; };
 		BB9D39B61DD534C200AB136D /* ReceiptValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReceiptValidator.swift; sourceTree = "<group>"; };
 		BB9D39B71DD534C200AB136D /* InAppReceipt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InAppReceipt.swift; sourceTree = "<group>"; };
 		BB9D39B81DD534C200AB136D /* Receipt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Receipt.swift; sourceTree = "<group>"; };
 		BB9D39B91DD534C200AB136D /* ReceiptProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReceiptProvider.swift; sourceTree = "<group>"; };
 		BB9D39BA1DD534C200AB136D /* ProductGroup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductGroup.swift; sourceTree = "<group>"; };
-		BB9D39BB1DD534C200AB136D /* SubscriptionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubscriptionManager.h; sourceTree = "<group>"; };
+		BB9D39BB1DD534C200AB136D /* SubscriptionMonitor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubscriptionMonitor.h; sourceTree = "<group>"; };
 		BC15930F042703FAD985BB47A8E62499 /* Pods-SubscriptionMonitor_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SubscriptionMonitor_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		BD289FA4C4B1593E1D89429250EC4881 /* SubscriptionMonitor.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = SubscriptionMonitor.modulemap; sourceTree = "<group>"; };
 		BEAAFFB1BFEEE78DE7A6B4E473501D23 /* Pods-SubscriptionMonitor_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SubscriptionMonitor_Tests-dummy.m"; sourceTree = "<group>"; };
@@ -110,16 +110,16 @@
 				BB9D39AF1DD534C200AB136D /* Subscription.swift */,
 				BB9D39B01DD534C200AB136D /* FreeProduct.swift */,
 				BB9D39B11DD534C200AB136D /* Product.swift */,
-				BB9D39B21DD534C200AB136D /* SubscriptionManager.swift */,
+				BB9D39B21DD534C200AB136D /* SubscriptionMonitor.swift */,
 				BB9D39B31DD534C200AB136D /* LocalReceiptProvider.swift */,
 				BB9D39B41DD534C200AB136D /* SimpleReceiptValidator.swift */,
-				BB9D39B51DD534C200AB136D /* SubscriptionManagerError.swift */,
+				BB9D39B51DD534C200AB136D /* SubscriptionMonitorError.swift */,
 				BB9D39B61DD534C200AB136D /* ReceiptValidator.swift */,
 				BB9D39B71DD534C200AB136D /* InAppReceipt.swift */,
 				BB9D39B81DD534C200AB136D /* Receipt.swift */,
 				BB9D39B91DD534C200AB136D /* ReceiptProvider.swift */,
 				BB9D39BA1DD534C200AB136D /* ProductGroup.swift */,
-				BB9D39BB1DD534C200AB136D /* SubscriptionManager.h */,
+				BB9D39BB1DD534C200AB136D /* SubscriptionMonitor.h */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -224,7 +224,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E7D7074F26C82CA3C330564FF0CEABD0 /* Pods-SubscriptionMonitor_Tests-umbrella.h in Headers */,
-				BB9D39C81DD534C200AB136D /* SubscriptionManager.h in Headers */,
+				BB9D39C81DD534C200AB136D /* SubscriptionMonitor.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -317,8 +317,8 @@
 				BB9D39BD1DD534C200AB136D /* FreeProduct.swift in Sources */,
 				BB9D39C41DD534C200AB136D /* InAppReceipt.swift in Sources */,
 				BB9D39C11DD534C200AB136D /* SimpleReceiptValidator.swift in Sources */,
-				BB9D39BF1DD534C200AB136D /* SubscriptionManager.swift in Sources */,
-				BB9D39C21DD534C200AB136D /* SubscriptionManagerError.swift in Sources */,
+				BB9D39BF1DD534C200AB136D /* SubscriptionMonitor.swift in Sources */,
+				BB9D39C21DD534C200AB136D /* SubscriptionMonitorError.swift in Sources */,
 				BB9D39C31DD534C200AB136D /* ReceiptValidator.swift in Sources */,
 				BB9D39BE1DD534C200AB136D /* Product.swift in Sources */,
 				BB9D39C71DD534C200AB136D /* ProductGroup.swift in Sources */,
