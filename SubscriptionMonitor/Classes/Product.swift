@@ -32,7 +32,7 @@ public class Product {
         }
     }
     
-    init(productID: String, productLevel: Int, duration: SubscriptionDuration, skProduct: SKProduct? = nil) {
+    public init(productID: String, productLevel: Int, duration: SubscriptionDuration, skProduct: SKProduct? = nil) {
         self.productID = productID
         self.productLevel = productLevel
         self.duration = duration

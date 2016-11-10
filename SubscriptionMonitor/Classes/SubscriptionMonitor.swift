@@ -18,36 +18,36 @@ public class SubscriptionMonitor: NSObject {
     public typealias SubscriptionMonitorCallback = (Receipt?, Subscriptions?, Error?) -> (Void)
     
     /// Subscription refresh interval (seconds)
-    var refreshInterval: Double {
+    public var refreshInterval: Double {
         didSet {
             self.restartTimer()
         }
     }
     
     /// Validate receipts against production or sandbox
-    var useSandbox: Bool
+    public let useSandbox: Bool
     
     ///
-    var validator: ReceiptValidator
+    public let validator: ReceiptValidator
     
-    var lastValidationTime: Date?
+    public var lastValidationTime: Date?
     
     static let SubscriptionMonitorRefreshNotification = Notification.Name("SubscriptionMonitorRefreshNotification")
     static let SubscriptionMonitorReceiptValidationFailed = Notification.Name("SubscriptionMonitorReceiptValidationFailed")
     
-    var activeSubscriptions: Subscriptions? {
+    public var activeSubscriptions: Subscriptions? {
         get {
             return self.activeSubs
         }
     }
     
-    var latestReceipt: Receipt? {
+    public var latestReceipt: Receipt? {
         get {
             return self.receipt
         }
     }
     
-    var isRefreshEnabled: Bool {
+    public var isRefreshEnabled: Bool {
         get {
             return self.isRefreshing
         }

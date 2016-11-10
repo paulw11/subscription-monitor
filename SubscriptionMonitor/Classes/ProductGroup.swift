@@ -11,8 +11,8 @@ import Foundation
 public class ProductGroup {
     
     
-    let name: String
-    var products: [Product] {
+    public let name: String
+    public var products: [Product] {
         get {
             return privateProducts
         }
@@ -20,11 +20,11 @@ public class ProductGroup {
     
     fileprivate var privateProducts = [Product]()
     
-    init(name: String) {
+    public init(name: String) {
         self.name = name
     }
     
-    func add(product: Product) {
+    public func add(product: Product) {
         self.privateProducts.append(product)
         self.privateProducts.sort { (product1, product2) -> Bool in
             return (product1.productLevel < product2.productLevel)

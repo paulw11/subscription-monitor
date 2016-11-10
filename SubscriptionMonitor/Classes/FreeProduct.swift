@@ -17,7 +17,7 @@ public class FreeProduct: Product {
         }
     }
     
-    init(productID: String, productLevel: Int) {
+    public init(productID: String, productLevel: Int) {
         
         super.init(productID: productID, productLevel: productLevel, duration: .perpetual, skProduct: nil)
         

@@ -20,7 +20,7 @@ public class SimpleReceiptValidator: ReceiptValidator {
         self.targetBundle = targetBundle
     }
     
-    public func validate(receipt: Data, forSubscriptionMonitor montitor: SubscriptionMonitor, completion: @escaping (Receipt?, Error?) -> (Void)) {
+    public func validate(receipt: Data, forSubscriptionMonitor monitor: SubscriptionMonitor, completion: @escaping (Receipt?, Error?) -> (Void)) {
         
         let base64Receipt = receipt.base64EncodedString().replacingOccurrences(of: "+", with: "%2B")
         
