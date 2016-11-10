@@ -1,6 +1,6 @@
 # SubscriptionMonitor
 
-[![CI Status](http://img.shields.io/travis/paulw/SubscriptionMonitor.svg?style=flat)](https://travis-ci.org/paulw/SubscriptionMonitor)
+[![CI Status](http://img.shields.io/travis/paulw11/SubscriptionMonitor.svg?style=flat)](https://travis-ci.org/paulw/SubscriptionMonitor)
 [![Version](https://img.shields.io/cocoapods/v/SubscriptionMonitor.svg?style=flat)](http://cocoapods.org/pods/SubscriptionMonitor)
 [![License](https://img.shields.io/cocoapods/l/SubscriptionMonitor.svg?style=flat)](http://cocoapods.org/pods/SubscriptionMonitor)
 [![Platform](https://img.shields.io/cocoapods/p/SubscriptionMonitor.svg?style=flat)](http://cocoapods.org/pods/SubscriptionMonitor)

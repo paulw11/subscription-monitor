@@ -1,0 +1,16 @@
+PODS:
+  - SubscriptionMonitor (0.1.0)
+
+DEPENDENCIES:
+  - SubscriptionMonitor (from `../`)
+
+EXTERNAL SOURCES:
+  SubscriptionMonitor:
+    :path: ../
+
+SPEC CHECKSUMS:
+  SubscriptionMonitor: de62441f680098594c1af6f3b1443c5a3b1c34a5
+
+PODFILE CHECKSUM: 06c89a53cbf81598dfcda8a928a399f5b63877f3
+
+COCOAPODS: 1.1.1

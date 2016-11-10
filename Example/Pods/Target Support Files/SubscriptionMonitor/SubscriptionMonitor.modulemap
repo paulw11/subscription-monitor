@@ -1,0 +1,6 @@
+framework module SubscriptionMonitor {
+  umbrella header "SubscriptionMonitor-umbrella.h"
+
+  export *
+  module * { export * }
+}
