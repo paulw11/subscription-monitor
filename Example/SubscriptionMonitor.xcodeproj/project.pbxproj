@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
+		BB9D39CC1DD5394900AB136D /* MockReceiptProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB9D39C91DD5394900AB136D /* MockReceiptProvider.swift */; };
+		BB9D39CD1DD5394900AB136D /* MockValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB9D39CA1DD5394900AB136D /* MockValidator.swift */; };
+		BB9D39CE1DD5394900AB136D /* testreceipt.json in Resources */ = {isa = PBXBuildFile; fileRef = BB9D39CB1DD5394900AB136D /* testreceipt.json */; };
 		FC13B2587CBD10051C3EB1C4 /* Pods_SubscriptionMonitor_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67E3744FBA1C6D9C6BE00B25 /* Pods_SubscriptionMonitor_Tests.framework */; };
 /* End PBXBuildFile section */
 
@@ -19,6 +22,9 @@
 		69753E97B0D70297AF7BB3FF /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		6ED372A1AE7CC9645C4D07FF /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		927FBABA14E704FB70483E77 /* SubscriptionMonitor.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = SubscriptionMonitor.podspec; path = ../SubscriptionMonitor.podspec; sourceTree = "<group>"; };
+		BB9D39C91DD5394900AB136D /* MockReceiptProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockReceiptProvider.swift; sourceTree = "<group>"; };
+		BB9D39CA1DD5394900AB136D /* MockValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockValidator.swift; sourceTree = "<group>"; };
+		BB9D39CB1DD5394900AB136D /* testreceipt.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = testreceipt.json; sourceTree = "<group>"; };
 		CB499252E38FCCF6D3CB1484 /* Pods-SubscriptionMonitor_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SubscriptionMonitor_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SubscriptionMonitor_Tests/Pods-SubscriptionMonitor_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		F85880280EB1F9313383255A /* Pods-SubscriptionMonitor_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SubscriptionMonitor_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SubscriptionMonitor_Tests/Pods-SubscriptionMonitor_Tests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -74,6 +80,8 @@
 		607FACE81AFB9204008FA782 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
+				BB9D39C91DD5394900AB136D /* MockReceiptProvider.swift */,
+				BB9D39CA1DD5394900AB136D /* MockValidator.swift */,
 				607FACEB1AFB9204008FA782 /* Tests.swift */,
 				607FACE91AFB9204008FA782 /* Supporting Files */,
 			);
@@ -83,6 +91,7 @@
 		607FACE91AFB9204008FA782 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				BB9D39CB1DD5394900AB136D /* testreceipt.json */,
 				607FACEA1AFB9204008FA782 /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -161,6 +170,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BB9D39CE1DD5394900AB136D /* testreceipt.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -220,6 +230,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				607FACEC1AFB9204008FA782 /* Tests.swift in Sources */,
+				BB9D39CC1DD5394900AB136D /* MockReceiptProvider.swift in Sources */,
+				BB9D39CD1DD5394900AB136D /* MockValidator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
