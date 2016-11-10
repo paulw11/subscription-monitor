@@ -1,5 +1,5 @@
 use_frameworks!
-target 'SubscriptionMonitor' do
+target 'SubscriptionMonitor_Tests' do
   pod 'SubscriptionMonitor', :path => '../'
 end
  
