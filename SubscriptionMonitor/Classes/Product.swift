@@ -1,6 +1,6 @@
 //
-//  SubscriptionManagerProduct.swift
-//  SubscriptionManager
+//  SubscriptionMonitorProduct.swift
+//  SubscriptionMonitor
 //
 //  Created by Paul Wilkinson on 3/11/16.
 //  Copyright © 2016 Paul Wilkinson. All rights reserved.
