@@ -5,11 +5,13 @@
 [![License](https://img.shields.io/cocoapods/l/SubscriptionMonitor.svg?style=flat)](http://cocoapods.org/pods/SubscriptionMonitor)
 [![Platform](https://img.shields.io/cocoapods/p/SubscriptionMonitor.svg?style=flat)](http://cocoapods.org/pods/SubscriptionMonitor)
 
-## Example
-
-To run the example project, clone the repo, and run `pod install` from the Example directory first.
+**A framework for monitoring auto renewing subscriptions on iOS**
+SubscriptionMonitor automates the tasks required to validate in-app purchase receipts for auto-renewing subscriptions.
+It will periodically refresh the application receipt and validate it against your server.  It will then deliver an NSNotification (and optionally invoke a closure) to let your app know that the receipt has been refreshed and that it should check for changes in subscriptions.
 
 ## Requirements
+SubscriptionManager supports iOS 9 and above. Your project must be written in Swift 3 in order to integrate SubscriptionManager.
+An external web server is required to communicate with Apple's servers to perform receipt validation.
 
 ## Installation
 
@@ -19,6 +21,8 @@ it, simply add the following line to your Podfile:
 ```ruby
 pod "SubscriptionMonitor"
 ```
+
+## Using SubscriptionMonitor
 
 ## Author
 
