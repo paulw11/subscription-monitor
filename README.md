@@ -11,7 +11,7 @@ SubscriptionMonitor automates the tasks required to validate in-app purchase rec
 It will periodically refresh the application receipt and validate it against your server.  It will then deliver an NSNotification (and optionally invoke a closure) to let your app know that the receipt has been refreshed and that it should check for changes in subscriptions.
 
 ## Requirements
-SubscriptionManager supports iOS 9 and above. Your project must be written in Swift 3 in order to integrate SubscriptionManager.
+SubscriptionMonitor supports iOS 9 and above. Your project must be written in Swift 3 in order to integrate SubscriptionManager.
 An external web server is required to communicate with Apple's servers to perform receipt validation.
 
 ## Installation
