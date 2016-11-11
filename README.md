@@ -36,20 +36,22 @@ pod "SubscriptionMonitor"
 Using `SubscriptionManager` is straight-forward:
 
 * Create an instance of a `ReceiptValidator` - `SimpleReceiptValidator` works with the sample `php` script (see below)
-
-    let validator = SimpleReceiptValidator(serverBase: "https://yourserver.yourdomain.com/iTunesReceiptValidator.php", targetBundle:"com.yourdomain.yourapp")
-
+```swift
+let validator = SimpleReceiptValidator(serverBase: "https://yourserver.yourdomain.com/iTunesReceiptValidator.php", 
+    targetBundle:"com.yourdomain.yourapp")
+```
 * Create an instance of `SubscriptionMonitor` that uses the validator - this needs to held where it won't be released,
 such as a property of your `UIApplicationDelegate` class
-   
-    self.subscriptionMonitor = SubscriptionMonitor(validator: validator, refreshInterval: 3600, useSandbox: false)
-
+```swift   
+self.subscriptionMonitor = SubscriptionMonitor(validator: validator, 
+         refreshInterval: 3600, useSandbox: false)
+```
 * You need to define the product groups and products for your auto-renewing subscriptions and add these to your SubscriptionMonitor. 
 It is important that the product ID and product levels match those defined in iTunesConnect.  
 You can also add a 'free' product to a product group.  You won't have a matching product in iTunesConnect for this.  If a
 `ProductGroup` contains a free product, then the free product will be 'active' when there are no other active subscriptions
 in that product group.
-
+```swift 
     let productGroup = ProductGroup(name: "First Product Group")
     let product1 = Product(productID: "com.mydomain.myProduct1", productLevel: 1, duration: .year)
     let product2 = Product(productID: "com.mydomain.myProduct2", productLevel: 1, duration: .month)
@@ -60,9 +62,10 @@ in that product group.
     productGroup.add(product: FreeProduct)
 
     self.subscriptionMonitor.add(productGroup: productGroup)
+```
 
 * Add a closure to be executed when then the receipt and subscription data is updated:
-
+```swift 
     self.subscriptionMonitor.setUpdateCallback { (receipt, subscriptions, error) -> Void in
         if error != nil {
            print("There was an error: \(error)")
@@ -73,17 +76,20 @@ in that product group.
             print("Active product: \(subscription.product.productID)")
         }
     }
+```
 
 * You can also subscribe to the `SubscriptionMonitorRefreshNotification` `NSNotification`.  The `userInfo` for this
 notification may contain keys for "Error", "Active" and "Receipt" depending on the validation result.
 
 * Call `startRefreshing` to start the time-based refreshing of receipt and subscription information:
-
+```swift
     self.subscriptionMonitor.startRefreshing()
+```
 
 * A manual receipt validation and refresh can be triggered using `refreshNow`
-
+```swift 
     self.subscriptionMonitor.refreshNow()
+```
 
 ## Server side script
 
