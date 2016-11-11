@@ -94,7 +94,7 @@ self.subscriptionMonitor.refreshNow()
 
 Apple advises that you should use a server to provide an interface between your app and their receipt validation server as this 
 allows you to build additional levels of security and trust into the process.  The `SimpleReceiptValidator` class that is included
-with SubscriptionMonitor is written to work with the `iTunesReceiptValidator.php` script that can be found in the *php* directory
+with SubscriptionMonitor is written to work with the `iTunesReceiptValidator.php` script that can be found in the [php](https://github.com/paulw11/subscription-monitor/tree/master/php) directory
 in the repo.  This script needs to be modified to contain the shared secret that can be retrieved from iTunesConnect.
 
 ## Author
