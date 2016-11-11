@@ -34,6 +34,8 @@ public class SubscriptionMonitor: NSObject {
     
     public static let SubscriptionMonitorRefreshNotification = Notification.Name("SubscriptionMonitorRefreshNotification")
     
+    public static let versionString = "1.0.0"
+    
     public var activeSubscriptions: Subscriptions? {
         get {
             return self.activeSubs
