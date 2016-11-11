@@ -8,6 +8,7 @@ class Tests: XCTestCase {
     var freeProductGroup: ProductGroup!
     
     var subscriptionMonitor: SubscriptionMonitor!
+    var notificationExpectation: XCTestExpectation!
     
     override func setUp() {
         super.setUp()
@@ -88,6 +89,7 @@ class Tests: XCTestCase {
                 
             })
             
+            
             self.subscriptionMonitor.refreshNow()
             
             self.waitForExpectations(timeout: 5.0, handler: { (error) in
@@ -95,6 +97,23 @@ class Tests: XCTestCase {
                     XCTFail(error.localizedDescription)
                 }
             })
+            
+            NotificationCenter.default.addObserver(self, selector: #selector(receiptNotification), name: SubscriptionMonitor.SubscriptionMonitorRefreshNotification, object: nil)
+            
+            self.subscriptionMonitor.clearUpdateCallback()
+            
+            self.notificationExpectation = self.expectation(description: "Receipt notification")
+            
+            self.subscriptionMonitor.refreshNow()
+            
+            self.waitForExpectations(timeout: 5.0, handler: { (error) in
+                if let error = error {
+                    XCTFail(error.localizedDescription)
+                }
+                
+                NotificationCenter.default.removeObserver(self)
+            })
+            
             
             if validator.read(receiptFile: "badtestreceipt") {
                 expectation = self.expectation(description: "Bad Receipt validation")
@@ -127,4 +146,7 @@ class Tests: XCTestCase {
         
     }
     
+    @objc func receiptNotification() {
+        self.notificationExpectation.fulfill()
+    }
 }
