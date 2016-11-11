@@ -11,34 +11,46 @@ import SubscriptionMonitor
 
 class MockValidator: ReceiptValidator {
     
-    let receipt: Receipt?
+    var receipt: Receipt?
     let targetBundle: String
     
     init?(_ receiptFile: String, targetBundle: String) {
         
-        let bundle = Bundle(for: MockReceiptProvider.self)
         self.targetBundle = targetBundle
+        if self.read(receiptFile: receiptFile) {
+            return
+        } else {
+            return nil
+        }
+        
+    }
+    
+    func read(receiptFile: String) -> Bool {
+        
+        let bundle = Bundle(for: MockReceiptProvider.self)
         
         if let path = bundle.path(forResource: receiptFile, ofType: "json") {
             let fileUrl = URL(fileURLWithPath: path)
             do {
                 let jsonData = try Data(contentsOf: fileUrl)
                 if let jsonObject = try JSONSerialization.jsonObject(with: jsonData, options: []) as? [String:Any] {
-                    if let receiptDict = jsonObject["receipt"] as? [String: Any] {
-                        if let receipt = Receipt(receiptDict) {
-                            self.receipt = receipt
-                            return
+                    if let status = jsonObject["status"] as? Int {
+                        if status == 0 {
+                            if let receipt = Receipt(jsonObject) {
+                                self.receipt = receipt
+                                return true
+                            }
+                        } else {
+                            self.receipt = nil
+                            return true
                         }
                     }
                 }
             }
             catch {
-                return nil
             }
         }
-        
-        return nil
-        
+        return false
     }
     
     func validate(receipt: Data, forSubscriptionMonitor: SubscriptionMonitor, completion: @escaping ReceiptValidator.ValidationHandler) -> Void {

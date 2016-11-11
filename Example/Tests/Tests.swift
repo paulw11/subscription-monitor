@@ -60,7 +60,7 @@ class Tests: XCTestCase {
         
         if let validator = MockValidator("testreceipt",targetBundle:"me.wilko.subscriptionmonitortest") {
             
-            let expectation = self.expectation(description: "Receipt validation")
+            var expectation = self.expectation(description: "Receipt validation")
             
             self.subscriptionMonitor = SubscriptionMonitor(validator: validator, refreshInterval: 10, useSandbox: true, receiptProvider: receiptProvider)
             
@@ -96,10 +96,34 @@ class Tests: XCTestCase {
                 }
             })
             
+            if validator.read(receiptFile: "badtestreceipt") {
+                expectation = self.expectation(description: "Bad Receipt validation")
+                
+                self.subscriptionMonitor.setUpdateCallback({ (receipt, activeProducts, error) -> (Void) in
+                    expectation.fulfill()
+                    
+                    XCTAssert(error != nil, "Expected error")
+                    XCTAssert(receipt == nil, "Expected a nil receipt")
+                
+                })
+                
+                self.subscriptionMonitor.refreshNow()
+                
+                self.waitForExpectations(timeout: 5.0, handler: { (error) in
+                    if let error = error {
+                        XCTFail(error.localizedDescription)
+                    }
+                })
+                
+            } else {
+                XCTFail("Unable to read bad receipt")
+            }
             
         } else {
             XCTFail()
         }
+        
+        
     }
     
 }
