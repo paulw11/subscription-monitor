@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'SubscriptionMonitor'
-  s.version          = '1.0.4'
+  s.version          = '1.0.5'
   s.summary          = 'A framework for monitoring auto renewing subscriptions on iOS.'
 
 # This description is used to generate tags and improve search results.
@@ -31,7 +31,7 @@ It will periodically refresh the application receipt and validate it against you
 
   s.ios.deployment_target = '9.0'
 
-  s.source_files = 'SubscriptionMonitor/Sources/**/*'
+  s.source_files = 'Sources/**/*'
   
   # s.resource_bundles = {
   #   'SubscriptionMonitor' => ['SubscriptionMonitor/Assets/*.png']

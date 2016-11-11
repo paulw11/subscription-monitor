@@ -9,23 +9,23 @@
 /* Begin PBXBuildFile section */
 		009DFD6513C013ACC460EBC887FC3E91 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
 		0B3A2776C0AD837FAA9464F4B87C8134 /* Pods-SubscriptionMonitor_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = BEAAFFB1BFEEE78DE7A6B4E473501D23 /* Pods-SubscriptionMonitor_Tests-dummy.m */; };
-		13FDE1687C19881988C226ABA6954433 /* ReceiptProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A50B6656B3A7B236EF658BAE10D04B9 /* ReceiptProvider.swift */; };
-		5CD01F6BF1A2399C36D27C6E336CDD19 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8C672B72F43ADB1481B3E35ED059D54 /* Product.swift */; };
+		13FDE1687C19881988C226ABA6954433 /* ReceiptProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B26BD7F8D8C26CCE662C634047C33B48 /* ReceiptProvider.swift */; };
+		5CD01F6BF1A2399C36D27C6E336CDD19 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF3937DC87961394F5113BE23658DB38 /* Product.swift */; };
 		6AB1901C4D63029130E4F25C6D6F3C53 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
-		71D5023FDD8B8E5014ED3D667A3B3EAF /* SubscriptionMonitor-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D5D2442CE41BE720663D3A350453DE95 /* SubscriptionMonitor-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		73C0644111590335E1F9E19C9AEE66E7 /* ReceiptValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05ED9FCAF88FE661104AF2A67D59904F /* ReceiptValidator.swift */; };
-		7960B1640FE57AE731F1A9E20DAC42C9 /* SimpleReceiptValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D66820D1BF082B05EB99D28A5A73543D /* SimpleReceiptValidator.swift */; };
-		83B48D36F832B91FA9024B8823813F9F /* SubscriptionMonitor.h in Headers */ = {isa = PBXBuildFile; fileRef = F994148D48A22DE52DBBD1BEAAA6DFB1 /* SubscriptionMonitor.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		88DEAAD64BE255B696F0D78223818A6A /* FreeProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95C973A79F1037F2959CD3489FAC868D /* FreeProduct.swift */; };
-		89A67C53C4F1743318907771433098F0 /* ProductGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FE745723DE0E96365D50FA51E36CC9A /* ProductGroup.swift */; };
-		8DBE45C1A43A6BB3E38546856AF2729C /* LocalReceiptProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 050E64E61481DE46B1D9B8E4A598B8F3 /* LocalReceiptProvider.swift */; };
-		B402AC9B8CA2756529678D4418EB7F5D /* Subscription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56E83239D4A44E061F1EA89121A6D601 /* Subscription.swift */; };
-		D4287CB693DAFE438CBA681E70484939 /* SubscriptionMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46DBC8FD2046835BFEFB4D0FB85461B6 /* SubscriptionMonitor.swift */; };
+		71D5023FDD8B8E5014ED3D667A3B3EAF /* SubscriptionMonitor-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E6CE8F1BB0AF41484F2D0D20A2398287 /* SubscriptionMonitor-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		73C0644111590335E1F9E19C9AEE66E7 /* ReceiptValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 603D3FC79567A84BB92D8CB6058D7143 /* ReceiptValidator.swift */; };
+		7960B1640FE57AE731F1A9E20DAC42C9 /* SimpleReceiptValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B1A59B1FA826F52F022D334FB4C3E4 /* SimpleReceiptValidator.swift */; };
+		83B48D36F832B91FA9024B8823813F9F /* SubscriptionMonitor.h in Headers */ = {isa = PBXBuildFile; fileRef = 27E9D460527EFA4BC31B65439FE4F376 /* SubscriptionMonitor.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		88DEAAD64BE255B696F0D78223818A6A /* FreeProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 297F2FBAEB18D18547F0C8F193C70EF0 /* FreeProduct.swift */; };
+		89A67C53C4F1743318907771433098F0 /* ProductGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = D41879AD44A4C55DFDA24A27F6038ECD /* ProductGroup.swift */; };
+		8DBE45C1A43A6BB3E38546856AF2729C /* LocalReceiptProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CA0AF40B3A5905D62BD8F7589D190DF /* LocalReceiptProvider.swift */; };
+		B402AC9B8CA2756529678D4418EB7F5D /* Subscription.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC7759E7F80A0435D86E6C12428E44B4 /* Subscription.swift */; };
+		D4287CB693DAFE438CBA681E70484939 /* SubscriptionMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E36BCE7595A68BBD49C0A853E5606CD9 /* SubscriptionMonitor.swift */; };
 		E7D7074F26C82CA3C330564FF0CEABD0 /* Pods-SubscriptionMonitor_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = DB0603E30CEA69F5EB8DFB282DC512E3 /* Pods-SubscriptionMonitor_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E8C472CF1A372077396A5A762DE9972E /* SubscriptionMonitorError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4180B700BCDE000635AE9E22E3B4FA /* SubscriptionMonitorError.swift */; };
-		EDC3C6054C72A69A595412D5A6542DF6 /* SubscriptionMonitor-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D7EEA3FCA7A62676D8B4B5F8FCFD5149 /* SubscriptionMonitor-dummy.m */; };
-		EEEAE73F7E2A1A3F242C33F01577AEA6 /* Receipt.swift in Sources */ = {isa = PBXBuildFile; fileRef = A726BDA5D7E4E27F6DA5EA0235F7FE00 /* Receipt.swift */; };
-		FA58C6F8E726906BA8B64D43CD06FFA5 /* InAppReceipt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F46A1B59A0A437947F6902F70DE4BB /* InAppReceipt.swift */; };
+		E8C472CF1A372077396A5A762DE9972E /* SubscriptionMonitorError.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF232483522FCCF1AF226B8EFC6E6714 /* SubscriptionMonitorError.swift */; };
+		EDC3C6054C72A69A595412D5A6542DF6 /* SubscriptionMonitor-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E7DEF4340E3A0E310552F6061A6F7F31 /* SubscriptionMonitor-dummy.m */; };
+		EEEAE73F7E2A1A3F242C33F01577AEA6 /* Receipt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 657BD180C1264AC1E3C0C6915379D084 /* Receipt.swift */; };
+		FA58C6F8E726906BA8B64D43CD06FFA5 /* InAppReceipt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14852B422BB0201AEF9C2969BC70E4A2 /* InAppReceipt.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,39 +39,39 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		050E64E61481DE46B1D9B8E4A598B8F3 /* LocalReceiptProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LocalReceiptProvider.swift; sourceTree = "<group>"; };
-		05ED9FCAF88FE661104AF2A67D59904F /* ReceiptValidator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ReceiptValidator.swift; sourceTree = "<group>"; };
 		07A4C5D602DA233ECF6A1A342096789F /* Pods-SubscriptionMonitor_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-SubscriptionMonitor_Tests.modulemap"; sourceTree = "<group>"; };
-		0FE745723DE0E96365D50FA51E36CC9A /* ProductGroup.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ProductGroup.swift; sourceTree = "<group>"; };
+		14852B422BB0201AEF9C2969BC70E4A2 /* InAppReceipt.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = InAppReceipt.swift; sourceTree = "<group>"; };
 		1FB16CA730090BC710213AC40A2A1FB1 /* Pods-SubscriptionMonitor_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SubscriptionMonitor_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
-		26F46A1B59A0A437947F6902F70DE4BB /* InAppReceipt.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = InAppReceipt.swift; sourceTree = "<group>"; };
+		27E9D460527EFA4BC31B65439FE4F376 /* SubscriptionMonitor.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SubscriptionMonitor.h; sourceTree = "<group>"; };
+		297F2FBAEB18D18547F0C8F193C70EF0 /* FreeProduct.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = FreeProduct.swift; sourceTree = "<group>"; };
+		2C3A8946AFF09D8437636ECA0E4FE452 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2E0FE4F67214307D438D385E6E2EB1E0 /* SubscriptionMonitor-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SubscriptionMonitor-prefix.pch"; sourceTree = "<group>"; };
 		363D58520C20820ED94189966846F139 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		46DBC8FD2046835BFEFB4D0FB85461B6 /* SubscriptionMonitor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SubscriptionMonitor.swift; sourceTree = "<group>"; };
-		4A4180B700BCDE000635AE9E22E3B4FA /* SubscriptionMonitorError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SubscriptionMonitorError.swift; sourceTree = "<group>"; };
+		4EA5EDBDBE68BE89C1798AB12A7AD3ED /* SubscriptionMonitor.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = SubscriptionMonitor.modulemap; sourceTree = "<group>"; };
 		4FFB887CC116244841A3812DA87BBAA9 /* Pods-SubscriptionMonitor_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SubscriptionMonitor_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		56E83239D4A44E061F1EA89121A6D601 /* Subscription.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Subscription.swift; sourceTree = "<group>"; };
+		5CA0AF40B3A5905D62BD8F7589D190DF /* LocalReceiptProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LocalReceiptProvider.swift; sourceTree = "<group>"; };
+		603D3FC79567A84BB92D8CB6058D7143 /* ReceiptValidator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ReceiptValidator.swift; sourceTree = "<group>"; };
+		657BD180C1264AC1E3C0C6915379D084 /* Receipt.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Receipt.swift; sourceTree = "<group>"; };
 		6A40D735A2B4A435F9CF61151C51062F /* SubscriptionMonitor.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SubscriptionMonitor.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		8A50B6656B3A7B236EF658BAE10D04B9 /* ReceiptProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ReceiptProvider.swift; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		959D028D050FAD3EB809145CF353B874 /* Pods-SubscriptionMonitor_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SubscriptionMonitor_Tests-frameworks.sh"; sourceTree = "<group>"; };
-		95C973A79F1037F2959CD3489FAC868D /* FreeProduct.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = FreeProduct.swift; sourceTree = "<group>"; };
 		9B0625446E0694DBE7C7AAF002C3FCDA /* Pods-SubscriptionMonitor_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SubscriptionMonitor_Tests-resources.sh"; sourceTree = "<group>"; };
 		A3A5902BD78F94359D9E20C63C08304A /* Pods_SubscriptionMonitor_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SubscriptionMonitor_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		A726BDA5D7E4E27F6DA5EA0235F7FE00 /* Receipt.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Receipt.swift; sourceTree = "<group>"; };
-		B8C672B72F43ADB1481B3E35ED059D54 /* Product.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
+		AC7759E7F80A0435D86E6C12428E44B4 /* Subscription.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Subscription.swift; sourceTree = "<group>"; };
+		B26BD7F8D8C26CCE662C634047C33B48 /* ReceiptProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ReceiptProvider.swift; sourceTree = "<group>"; };
 		BC15930F042703FAD985BB47A8E62499 /* Pods-SubscriptionMonitor_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SubscriptionMonitor_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		BD289FA4C4B1593E1D89429250EC4881 /* SubscriptionMonitor.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = SubscriptionMonitor.modulemap; sourceTree = "<group>"; };
 		BEAAFFB1BFEEE78DE7A6B4E473501D23 /* Pods-SubscriptionMonitor_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SubscriptionMonitor_Tests-dummy.m"; sourceTree = "<group>"; };
 		C3B8DC3F28F6F2EE4C2A3E6B847F1C78 /* Pods-SubscriptionMonitor_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SubscriptionMonitor_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		C423E8C53AEE9A5165AECB3A941C48CC /* SubscriptionMonitor.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SubscriptionMonitor.xcconfig; sourceTree = "<group>"; };
+		C3C9B6005BBC7A897F461CCA0AC95FDC /* SubscriptionMonitor.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SubscriptionMonitor.xcconfig; sourceTree = "<group>"; };
 		CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		D5D2442CE41BE720663D3A350453DE95 /* SubscriptionMonitor-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SubscriptionMonitor-umbrella.h"; sourceTree = "<group>"; };
-		D66820D1BF082B05EB99D28A5A73543D /* SimpleReceiptValidator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SimpleReceiptValidator.swift; sourceTree = "<group>"; };
-		D7EEA3FCA7A62676D8B4B5F8FCFD5149 /* SubscriptionMonitor-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SubscriptionMonitor-dummy.m"; sourceTree = "<group>"; };
+		D41879AD44A4C55DFDA24A27F6038ECD /* ProductGroup.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ProductGroup.swift; sourceTree = "<group>"; };
+		D6B1A59B1FA826F52F022D334FB4C3E4 /* SimpleReceiptValidator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SimpleReceiptValidator.swift; sourceTree = "<group>"; };
 		DB0603E30CEA69F5EB8DFB282DC512E3 /* Pods-SubscriptionMonitor_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SubscriptionMonitor_Tests-umbrella.h"; sourceTree = "<group>"; };
-		DD5E1FCBEFC763BBED2F70B904607F9B /* SubscriptionMonitor-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SubscriptionMonitor-prefix.pch"; sourceTree = "<group>"; };
-		F11C3C519984264EF96D961C28246066 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F994148D48A22DE52DBBD1BEAAA6DFB1 /* SubscriptionMonitor.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SubscriptionMonitor.h; sourceTree = "<group>"; };
+		E36BCE7595A68BBD49C0A853E5606CD9 /* SubscriptionMonitor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SubscriptionMonitor.swift; sourceTree = "<group>"; };
+		E6CE8F1BB0AF41484F2D0D20A2398287 /* SubscriptionMonitor-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SubscriptionMonitor-umbrella.h"; sourceTree = "<group>"; };
+		E7DEF4340E3A0E310552F6061A6F7F31 /* SubscriptionMonitor-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SubscriptionMonitor-dummy.m"; sourceTree = "<group>"; };
+		EF232483522FCCF1AF226B8EFC6E6714 /* SubscriptionMonitorError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SubscriptionMonitorError.swift; sourceTree = "<group>"; };
+		EF3937DC87961394F5113BE23658DB38 /* Product.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,40 +94,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		22B56AD5A0191E63D44148D628965B6F /* SubscriptionMonitor */ = {
+		31C7E175AF93D3C964D3F8F0F5489DA6 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				8C91C04AF9A77A74DC0CDD09AFCE3843 /* SubscriptionMonitor */,
-				9EBADFF3EF71982E4D7B6D3AE70273E7 /* Support Files */,
+				2C3A8946AFF09D8437636ECA0E4FE452 /* Info.plist */,
+				4EA5EDBDBE68BE89C1798AB12A7AD3ED /* SubscriptionMonitor.modulemap */,
+				C3C9B6005BBC7A897F461CCA0AC95FDC /* SubscriptionMonitor.xcconfig */,
+				E7DEF4340E3A0E310552F6061A6F7F31 /* SubscriptionMonitor-dummy.m */,
+				2E0FE4F67214307D438D385E6E2EB1E0 /* SubscriptionMonitor-prefix.pch */,
+				E6CE8F1BB0AF41484F2D0D20A2398287 /* SubscriptionMonitor-umbrella.h */,
 			);
-			name = SubscriptionMonitor;
-			path = ../..;
-			sourceTree = "<group>";
-		};
-		4643D20828E9CF2069A99B4EA292AA4C /* Sources */ = {
-			isa = PBXGroup;
-			children = (
-				95C973A79F1037F2959CD3489FAC868D /* FreeProduct.swift */,
-				26F46A1B59A0A437947F6902F70DE4BB /* InAppReceipt.swift */,
-				050E64E61481DE46B1D9B8E4A598B8F3 /* LocalReceiptProvider.swift */,
-				B8C672B72F43ADB1481B3E35ED059D54 /* Product.swift */,
-				0FE745723DE0E96365D50FA51E36CC9A /* ProductGroup.swift */,
-				A726BDA5D7E4E27F6DA5EA0235F7FE00 /* Receipt.swift */,
-				8A50B6656B3A7B236EF658BAE10D04B9 /* ReceiptProvider.swift */,
-				05ED9FCAF88FE661104AF2A67D59904F /* ReceiptValidator.swift */,
-				D66820D1BF082B05EB99D28A5A73543D /* SimpleReceiptValidator.swift */,
-				56E83239D4A44E061F1EA89121A6D601 /* Subscription.swift */,
-				F994148D48A22DE52DBBD1BEAAA6DFB1 /* SubscriptionMonitor.h */,
-				46DBC8FD2046835BFEFB4D0FB85461B6 /* SubscriptionMonitor.swift */,
-				4A4180B700BCDE000635AE9E22E3B4FA /* SubscriptionMonitorError.swift */,
-			);
-			path = Sources;
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/SubscriptionMonitor";
 			sourceTree = "<group>";
 		};
 		74E16424AC88490AC94FF814EB6C8E0B /* Development Pods */ = {
 			isa = PBXGroup;
 			children = (
-				22B56AD5A0191E63D44148D628965B6F /* SubscriptionMonitor */,
+				FF803BC16D124A643EF9268E43ED8139 /* SubscriptionMonitor */,
 			);
 			name = "Development Pods";
 			sourceTree = "<group>";
@@ -178,26 +162,24 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		8C91C04AF9A77A74DC0CDD09AFCE3843 /* SubscriptionMonitor */ = {
+		AC11DEA91B13CD51117554576121E4B6 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				4643D20828E9CF2069A99B4EA292AA4C /* Sources */,
+				297F2FBAEB18D18547F0C8F193C70EF0 /* FreeProduct.swift */,
+				14852B422BB0201AEF9C2969BC70E4A2 /* InAppReceipt.swift */,
+				5CA0AF40B3A5905D62BD8F7589D190DF /* LocalReceiptProvider.swift */,
+				EF3937DC87961394F5113BE23658DB38 /* Product.swift */,
+				D41879AD44A4C55DFDA24A27F6038ECD /* ProductGroup.swift */,
+				657BD180C1264AC1E3C0C6915379D084 /* Receipt.swift */,
+				B26BD7F8D8C26CCE662C634047C33B48 /* ReceiptProvider.swift */,
+				603D3FC79567A84BB92D8CB6058D7143 /* ReceiptValidator.swift */,
+				D6B1A59B1FA826F52F022D334FB4C3E4 /* SimpleReceiptValidator.swift */,
+				AC7759E7F80A0435D86E6C12428E44B4 /* Subscription.swift */,
+				27E9D460527EFA4BC31B65439FE4F376 /* SubscriptionMonitor.h */,
+				E36BCE7595A68BBD49C0A853E5606CD9 /* SubscriptionMonitor.swift */,
+				EF232483522FCCF1AF226B8EFC6E6714 /* SubscriptionMonitorError.swift */,
 			);
-			path = SubscriptionMonitor;
-			sourceTree = "<group>";
-		};
-		9EBADFF3EF71982E4D7B6D3AE70273E7 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				F11C3C519984264EF96D961C28246066 /* Info.plist */,
-				BD289FA4C4B1593E1D89429250EC4881 /* SubscriptionMonitor.modulemap */,
-				C423E8C53AEE9A5165AECB3A941C48CC /* SubscriptionMonitor.xcconfig */,
-				D7EEA3FCA7A62676D8B4B5F8FCFD5149 /* SubscriptionMonitor-dummy.m */,
-				DD5E1FCBEFC763BBED2F70B904607F9B /* SubscriptionMonitor-prefix.pch */,
-				D5D2442CE41BE720663D3A350453DE95 /* SubscriptionMonitor-umbrella.h */,
-			);
-			name = "Support Files";
-			path = "Example/Pods/Target Support Files/SubscriptionMonitor";
+			path = Sources;
 			sourceTree = "<group>";
 		};
 		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
@@ -214,6 +196,16 @@
 				7D02888574BA99BEA06A469C03098C8C /* Pods-SubscriptionMonitor_Tests */,
 			);
 			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		FF803BC16D124A643EF9268E43ED8139 /* SubscriptionMonitor */ = {
+			isa = PBXGroup;
+			children = (
+				AC11DEA91B13CD51117554576121E4B6 /* Sources */,
+				31C7E175AF93D3C964D3F8F0F5489DA6 /* Support Files */,
+			);
+			name = SubscriptionMonitor;
+			path = ../..;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -344,7 +336,7 @@
 /* Begin XCBuildConfiguration section */
 		30D022BE9981A0D2CDF4566FECB18E38 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C423E8C53AEE9A5165AECB3A941C48CC /* SubscriptionMonitor.xcconfig */;
+			baseConfigurationReference = C3C9B6005BBC7A897F461CCA0AC95FDC /* SubscriptionMonitor.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -533,7 +525,7 @@
 		};
 		CA387A49FB6D9A2D0C29491925C62006 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C423E8C53AEE9A5165AECB3A941C48CC /* SubscriptionMonitor.xcconfig */;
+			baseConfigurationReference = C3C9B6005BBC7A897F461CCA0AC95FDC /* SubscriptionMonitor.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";

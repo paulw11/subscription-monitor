@@ -1,5 +1,5 @@
 PODS:
-  - SubscriptionMonitor (0.1.0)
+  - SubscriptionMonitor (1.0.4)
 
 DEPENDENCIES:
   - SubscriptionMonitor (from `../`)
@@ -9,8 +9,8 @@ EXTERNAL SOURCES:
     :path: ../
 
 SPEC CHECKSUMS:
-  SubscriptionMonitor: de62441f680098594c1af6f3b1443c5a3b1c34a5
+  SubscriptionMonitor: 838feb1634451bc811708da898f22e0b32050a3a
 
-PODFILE CHECKSUM: 06c89a53cbf81598dfcda8a928a399f5b63877f3
+PODFILE CHECKSUM: 25d5967f3bc36bd60b86b7a001a1bd212d5e3bd3
 
 COCOAPODS: 1.1.1
