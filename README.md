@@ -52,30 +52,29 @@ You can also add a 'free' product to a product group.  You won't have a matching
 `ProductGroup` contains a free product, then the free product will be 'active' when there are no other active subscriptions
 in that product group.
 ```swift 
-    let productGroup = ProductGroup(name: "First Product Group")
-    let product1 = Product(productID: "com.mydomain.myProduct1", productLevel: 1, duration: .year)
-    let product2 = Product(productID: "com.mydomain.myProduct2", productLevel: 1, duration: .month)
-    let freeProduct = FreeProduct(productID: "com.mydomain.freeproduct", productLevel: 99)
+let productGroup = ProductGroup(name: "First Product Group")
+let product1 = Product(productID: "com.mydomain.myProduct1", productLevel: 1, duration: .year)
+let product2 = Product(productID: "com.mydomain.myProduct2", productLevel: 1, duration: .month)
+let freeProduct = FreeProduct(productID: "com.mydomain.freeproduct", productLevel: 99)
     
-    productGroup.add(product: product1)
-    productGroup.add(product: product2)
-    productGroup.add(product: FreeProduct)
+productGroup.add(product: product1)
+productGroup.add(product: product2)
+productGroup.add(product: FreeProduct)
 
-    self.subscriptionMonitor.add(productGroup: productGroup)
+self.subscriptionMonitor.add(productGroup: productGroup)
 ```
 
 * Add a closure to be executed when then the receipt and subscription data is updated:
 ```swift 
-    self.subscriptionMonitor.setUpdateCallback { (receipt, subscriptions, error) -> Void in
-        if error != nil {
-           print("There was an error: \(error)")
-        }
-        //  Note that even after an error there may be active `subscriptions` if you have free products defined
-
-        for subscription in subscriptions {
-            print("Active product: \(subscription.product.productID)")
-        }
+self.subscriptionMonitor.setUpdateCallback { (receipt, subscriptions, error) -> Void in
+    if error != nil {
+       print("There was an error: \(error)")
     }
+    //  Note that even after an error there may be active `subscriptions` if you have free products defined
+    for subscription in subscriptions {
+       print("Active product: \(subscription.product.productID)")
+    }
+}
 ```
 
 * You can also subscribe to the `SubscriptionMonitorRefreshNotification` `NSNotification`.  The `userInfo` for this
@@ -83,12 +82,12 @@ notification may contain keys for "Error", "Active" and "Receipt" depending on t
 
 * Call `startRefreshing` to start the time-based refreshing of receipt and subscription information:
 ```swift
-    self.subscriptionMonitor.startRefreshing()
+self.subscriptionMonitor.startRefreshing()
 ```
 
 * A manual receipt validation and refresh can be triggered using `refreshNow`
 ```swift 
-    self.subscriptionMonitor.refreshNow()
+self.subscriptionMonitor.refreshNow()
 ```
 
 ## Server side script
