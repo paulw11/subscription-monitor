@@ -104,6 +104,7 @@ class Tests: XCTestCase {
                     
                     XCTAssert(error != nil, "Expected error")
                     XCTAssert(receipt == nil, "Expected a nil receipt")
+                    XCTAssert(activeProducts?.count == 1,"Expected a free product")
                 
                 })
                 
