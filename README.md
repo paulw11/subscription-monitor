@@ -8,7 +8,15 @@
 **A framework for monitoring auto renewing subscriptions on iOS**
 
 SubscriptionMonitor automates the tasks required to validate in-app purchase receipts for auto-renewing subscriptions.
-It will periodically refresh the application receipt and validate it against your server.  It will then deliver an NSNotification (and optionally invoke a closure) to let your app know that the receipt has been refreshed and that it should check for changes in subscriptions.
+It will periodically refresh the application receipt and validate it against your server.  
+An NSNotification (and optionally a closure invocation) is used to let your app know that the receipt has been refreshed 
+and that it should check for changes in subscriptions.
+
+**Features**
+
+* Pluggable architecture allows you to define your own receipt validation class
+* Support for sandbox and production receipt validation
+* Support for "free" products; enable base functionality that can be overridden by subscriptions using in a consistent manner
 
 ## Requirements
 SubscriptionMonitor supports iOS 9 and above. Your project must be written in Swift 3 in order to integrate SubscriptionManager.
@@ -24,6 +32,65 @@ pod "SubscriptionMonitor"
 ```
 
 ## Using SubscriptionMonitor
+
+Using `SubscriptionManager` is straight-forward:
+
+* Create an instance of a `ReceiptValidator` - `SimpleReceiptValidator` works with the sample `php` script (see below)
+
+    let validator = SimpleReceiptValidator(serverBase: "https://yourserver.yourdomain.com/iTunesReceiptValidator.php", targetBundle:"com.yourdomain.yourapp")
+
+* Create an instance of `SubscriptionMonitor` that uses the validator - this needs to held where it won't be released,
+such as a property of your `UIApplicationDelegate` class
+   
+    self.subscriptionMonitor = SubscriptionMonitor(validator: validator, refreshInterval: 3600, useSandbox: false)
+
+* You need to define the product groups and products for your auto-renewing subscriptions and add these to your SubscriptionMonitor. 
+It is important that the product ID and product levels match those defined in iTunesConnect.  
+You can also add a 'free' product to a product group.  You won't have a matching product in iTunesConnect for this.  If a
+`ProductGroup` contains a free product, then the free product will be 'active' when there are no other active subscriptions
+in that product group.
+
+    let productGroup = ProductGroup(name: "First Product Group")
+    let product1 = Product(productID: "com.mydomain.myProduct1", productLevel: 1, duration: .year)
+    let product2 = Product(productID: "com.mydomain.myProduct2", productLevel: 1, duration: .month)
+    let freeProduct = FreeProduct(productID: "com.mydomain.freeproduct", productLevel: 99)
+    
+    productGroup.add(product: product1)
+    productGroup.add(product: product2)
+    productGroup.add(product: FreeProduct)
+
+    self.subscriptionMonitor.add(productGroup: productGroup)
+
+* Add a closure to be executed when then the receipt and subscription data is updated:
+
+    self.subscriptionMonitor.setUpdateCallback { (receipt, subscriptions, error) -> Void in
+        if error != nil {
+           print("There was an error: \(error)")
+        }
+        //  Note that even after an error there may be active `subscriptions` if you have free products defined
+
+        for subscription in subscriptions {
+            print("Active product: \(subscription.product.productID)")
+        }
+    }
+
+* You can also subscribe to the `SubscriptionMonitorRefreshNotification` `NSNotification`.  The `userInfo` for this
+notification may contain keys for "Error", "Active" and "Receipt" depending on the validation result.
+
+* Call `startRefreshing` to start the time-based refreshing of receipt and subscription information:
+
+    self.subscriptionMonitor.startRefreshing()
+
+* A manual receipt validation and refresh can be triggered using `refreshNow`
+
+    self.subscriptionMonitor.refreshNow()
+
+## Server side script
+
+Apple advises that you should use a server to provide an interface between your app and their receipt validation server as this 
+allows you to build additional levels of security and trust into the process.  The `SimpleReceiptValidator` class that is included
+with SubscriptionMonitor is written to work with the `iTunesReceiptValidator.php` script that can be found in the *php* directory
+in the repo.  This script needs to be modified to contain the shared secret that can be retrieved from iTunesConnect.
 
 ## Author
 
