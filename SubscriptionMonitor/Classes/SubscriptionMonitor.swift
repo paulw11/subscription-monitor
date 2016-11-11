@@ -153,7 +153,7 @@ public class SubscriptionMonitor: NSObject {
             
             guard error == nil, let receiptData = data else {
                 let validatorError = SubscriptionMonitorError.noReceiptAvailable(rootError: error)
-                NotificationCenter.default.post(name: SubscriptionMonitor.SubscriptionMonitorRefreshNotification, object: self, userInfo: ["Error":validatorError,"Active":self.activeSubs])
+                NotificationCenter.default.post(name: SubscriptionMonitor.SubscriptionMonitorRefreshNotification, object: self, userInfo: self.notificationDictionary(error: validatorError, receipt: nil, subscriptions: self.activeSubs))
                 self.receiptCallback?(nil,self.activeSubs,validatorError)
                 return
             }
@@ -162,23 +162,22 @@ public class SubscriptionMonitor: NSObject {
                 
                 guard error == nil, let validatedReceipt = receipt else {
                     let validatorError = SubscriptionMonitorError.validatorError(rootError: error)
-                    NotificationCenter.default.post(name: SubscriptionMonitor.SubscriptionMonitorRefreshNotification, object: self, userInfo: ["Error":validatorError,"Active":self.activeSubs])
+                    NotificationCenter.default.post(name: SubscriptionMonitor.SubscriptionMonitorRefreshNotification, object: self, userInfo: self.notificationDictionary(error: validatorError, receipt: nil, subscriptions: self.activeSubs))
                     self.receiptCallback?(nil,self.activeSubs,validatorError)
                     return
                 }
                 
                 self.receipt = nil
                 
-                
                 do {
                     try self.process(validatedReceipt)
                     self.receiptCallback?(self.receipt,self.activeSubs,nil)
-                    NotificationCenter.default.post(name: SubscriptionMonitor.SubscriptionMonitorRefreshNotification, object: self, userInfo:["Active":self.activeSubs,"Receipt":self.receipt!])
+                    NotificationCenter.default.post(name: SubscriptionMonitor.SubscriptionMonitorRefreshNotification, object: self, userInfo: self.notificationDictionary(error: nil, receipt: self.receipt, subscriptions: self.activeSubs))
                 } catch {
                     
                     self.receiptCallback?(nil,self.activeSubs,error)
                     let validatorError = SubscriptionMonitorError.validatorError(rootError: error)
-                    NotificationCenter.default.post(name: SubscriptionMonitor.SubscriptionMonitorRefreshNotification, object: self, userInfo: ["Error":validatorError,"Active":self.activeSubs])
+                    NotificationCenter.default.post(name: SubscriptionMonitor.SubscriptionMonitorRefreshNotification, object: self, userInfo: self.notificationDictionary(error: error, receipt: nil, subscriptions: self.activeSubs))
                 }
                 
             })
@@ -223,6 +222,24 @@ public class SubscriptionMonitor: NSObject {
         }
         self.activeSubs = activeProducts
         self.receipt = validateReceipt
+    }
+    
+    func notificationDictionary(error: Error?, receipt: Receipt?, subscriptions: Subscriptions?) -> [String: Any] {
+        var returnDict = [String:Any]()
+        
+        if let error = error {
+            returnDict["Error"] = error as Any
+        }
+        
+        if let receipt = receipt {
+            returnDict["Receipt"] = receipt as Any
+        }
+        
+        if let subscriptions = subscriptions {
+            returnDict["Active"] = subscriptions as Any
+        }
+        
+        return returnDict
     }
 }
 
