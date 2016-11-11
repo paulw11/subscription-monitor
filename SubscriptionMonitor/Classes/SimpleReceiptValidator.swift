@@ -70,8 +70,9 @@ public class SimpleReceiptValidator: ReceiptValidator {
                     return
                 }
                 
+            } else {
+                completion(nil,SubscriptionMonitorError.validateFailed(message: "Unable to validate receipt"))
             }
-            completion(nil,SubscriptionMonitorError.validateFailed(message: "Unable to validte receipt"))
         });
         
         task.resume()
