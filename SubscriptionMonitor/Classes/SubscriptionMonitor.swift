@@ -140,10 +140,16 @@ public class SubscriptionMonitor: NSObject {
     @objc fileprivate func refreshSubscriptions() {
         
         self.receiptProvider.getReceipt { (data, error) -> (Void) in
+            
+            self.activeSubs = nil
+            do {
+                try self.process(nil)   // There may be free active products
+            } catch {}
+            
             guard error == nil, let receiptData = data else {
                 let validatorError = SubscriptionMonitorError.noReceiptAvailable(rootError: error)
-                NotificationCenter.default.post(name: SubscriptionMonitor.SubscriptionMonitorReceiptValidationFailed, object: self, userInfo: ["Error":validatorError])
-                self.receiptCallback?(nil,nil,validatorError)
+                NotificationCenter.default.post(name: SubscriptionMonitor.SubscriptionMonitorReceiptValidationFailed, object: self, userInfo: ["Error":validatorError,"Active":self.activeSubs])
+                self.receiptCallback?(nil,self.activeSubs,validatorError)
                 return
             }
             
@@ -151,29 +157,30 @@ public class SubscriptionMonitor: NSObject {
                 
                 guard error == nil, let validatedReceipt = receipt else {
                     let validatorError = SubscriptionMonitorError.validatorError(rootError: error)
-                    NotificationCenter.default.post(name: SubscriptionMonitor.SubscriptionMonitorReceiptValidationFailed, object: self, userInfo: ["Error":validatorError])
-                    self.receiptCallback?(nil,nil,validatorError)
+                    NotificationCenter.default.post(name: SubscriptionMonitor.SubscriptionMonitorReceiptValidationFailed, object: self, userInfo: ["Error":validatorError,"Active":self.activeSubs])
+                    self.receiptCallback?(nil,self.activeSubs,validatorError)
                     return
                 }
                 
                 self.receipt = nil
-                self.activeSubs = nil
+                
                 
                 do {
                     try self.process(validatedReceipt)
                     self.receiptCallback?(self.receipt,self.activeSubs,nil)
-                    NotificationCenter.default.post(name: SubscriptionMonitor.SubscriptionMonitorRefreshNotification, object: self, userInfo:nil)
+                    NotificationCenter.default.post(name: SubscriptionMonitor.SubscriptionMonitorRefreshNotification, object: self, userInfo:["Active":self.activeSubs])
                 } catch {
-                    self.receiptCallback?(nil,nil,error)
+                    
+                    self.receiptCallback?(nil,self.activeSubs,error)
                     let validatorError = SubscriptionMonitorError.validatorError(rootError: error)
-                    NotificationCenter.default.post(name: SubscriptionMonitor.SubscriptionMonitorReceiptValidationFailed, object: self, userInfo: ["Error":validatorError])
+                    NotificationCenter.default.post(name: SubscriptionMonitor.SubscriptionMonitorReceiptValidationFailed, object: self, userInfo: ["Error":validatorError,"Active":self.activeSubs])
                 }
                 
             })
         }
     }
     
-    func process(_ validateReceipt:Receipt) throws {
+    func process(_ validateReceipt:Receipt?) throws {
         
         var productsDict = [String:ProductGroup]()
         
@@ -188,7 +195,7 @@ public class SubscriptionMonitor: NSObject {
             }
         }
         
-        if let latestInApp = validateReceipt.latestInApp {
+        if let latestInApp = validateReceipt?.latestInApp {
             for inapp in latestInApp {
                 if self.isActive(inApp: inapp) {
                     guard let potentialProduct = self.products[inapp.productId] else {
@@ -210,7 +217,7 @@ public class SubscriptionMonitor: NSObject {
         }
         self.activeSubs = activeProducts
         self.receipt = validateReceipt
-
+        
         
     }
     
