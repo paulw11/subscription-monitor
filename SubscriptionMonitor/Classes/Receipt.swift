@@ -30,7 +30,11 @@ public class Receipt {
         return df
     }()
     
-    public init?(_ receiptDictionary:[String:Any]) {
+    public init?(_ receiptJson:[String:Any]) {
+        
+        guard let receiptDictionary = receiptJson["receipt"] as? [String:Any] else {
+            return nil
+        }
         
         guard let receiptType = receiptDictionary["receipt_type"] as? String,
             let bundleId = receiptDictionary["bundle_id"] as? String,
@@ -72,7 +76,9 @@ public class Receipt {
             self.inApp = nil
         }
         
-        if let latestReceiptArray = receiptDictionary["latest_receipt_info"] as? [[String:Any]] {
+        
+        
+        if let latestReceiptArray = receiptJson["latest_receipt_info"] as? [[String:Any]] {
             if (!latestReceiptArray.isEmpty) {
                 self.latestInApp = [InAppReceipt]()
                 for inAppDictionary in latestReceiptArray {

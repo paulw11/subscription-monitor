@@ -50,8 +50,7 @@ public class SimpleReceiptValidator: ReceiptValidator {
                     if let json = try JSONSerialization.jsonObject(with: jsonData, options: []) as? [String:AnyObject] {
                         if let status = json["status"] as? Int {
                             if status == 0 {
-                                if let receiptDict = json["receipt"] as? [String:AnyObject] {
-                                    if let receipt = Receipt(receiptDict) {
+                                    if let receipt = Receipt(json) {
                                         if receipt.bundleId == self.targetBundle {
                                             completion(receipt,nil)
                                         } else {
@@ -59,10 +58,6 @@ public class SimpleReceiptValidator: ReceiptValidator {
                                             return
                                         }
                                     }
-                                } else {
-                                    completion(nil,SubscriptionMonitorError.validateFailed(message: "Could not parse receipt"))
-                                    return
-                                }
                             } else {
                                 completion(nil,SubscriptionMonitorError.validateFailed(message: "Server returned non-zero status: \(status)"))
                                 return
