@@ -104,7 +104,7 @@
 			path = ../..;
 			sourceTree = "<group>";
 		};
-		4643D20828E9CF2069A99B4EA292AA4C /* Classes */ = {
+		4643D20828E9CF2069A99B4EA292AA4C /* Sources */ = {
 			isa = PBXGroup;
 			children = (
 				95C973A79F1037F2959CD3489FAC868D /* FreeProduct.swift */,
@@ -121,7 +121,7 @@
 				46DBC8FD2046835BFEFB4D0FB85461B6 /* SubscriptionMonitor.swift */,
 				4A4180B700BCDE000635AE9E22E3B4FA /* SubscriptionMonitorError.swift */,
 			);
-			path = Classes;
+			path = Sources;
 			sourceTree = "<group>";
 		};
 		74E16424AC88490AC94FF814EB6C8E0B /* Development Pods */ = {
@@ -181,7 +181,7 @@
 		8C91C04AF9A77A74DC0CDD09AFCE3843 /* SubscriptionMonitor */ = {
 			isa = PBXGroup;
 			children = (
-				4643D20828E9CF2069A99B4EA292AA4C /* Classes */,
+				4643D20828E9CF2069A99B4EA292AA4C /* Sources */,
 			);
 			path = SubscriptionMonitor;
 			sourceTree = "<group>";
