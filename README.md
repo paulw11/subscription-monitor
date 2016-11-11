@@ -19,7 +19,7 @@ and that it should check for changes in subscriptions.
 * Support for "free" products; enable base functionality that can be overridden by subscriptions using in a consistent manner
 
 ## Requirements
-SubscriptionMonitor supports iOS 9 and above. Your project must be written in Swift 3 in order to integrate SubscriptionManager.
+SubscriptionMonitor supports iOS 9 and above. Your project must be written in Swift 3 in order to integrate SubscriptionMonitor.
 An external web server is required to communicate with Apple's servers to perform receipt validation.
 
 ## Installation
