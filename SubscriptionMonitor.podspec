@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'SubscriptionMonitor'
-  s.version          = '1.0.2'
+  s.version          = '1.0.3'
   s.summary          = 'A framework for monitoring auto renewing subscriptions on iOS.'
 
 # This description is used to generate tags and improve search results.
