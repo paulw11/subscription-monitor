@@ -177,7 +177,7 @@ public class SubscriptionMonitor: NSObject {
                     
                     self.receiptCallback?(nil,self.activeSubs,error)
                     let validatorError = SubscriptionMonitorError.validatorError(rootError: error)
-                    NotificationCenter.default.post(name: SubscriptionMonitor.SubscriptionMonitorRefreshNotification, object: self, userInfo: self.notificationDictionary(error: error, receipt: nil, subscriptions: self.activeSubs))
+                    NotificationCenter.default.post(name: SubscriptionMonitor.SubscriptionMonitorRefreshNotification, object: self, userInfo: self.notificationDictionary(error: validatorError, receipt: nil, subscriptions: self.activeSubs))
                 }
                 
             })
