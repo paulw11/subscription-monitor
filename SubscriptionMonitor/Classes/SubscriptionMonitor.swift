@@ -196,8 +196,9 @@ public class SubscriptionMonitor: NSObject {
         }
         
         if let latestInApp = validateReceipt?.latestInApp {
+            let now = Date()
             for inapp in latestInApp {
-                if self.isActive(inApp: inapp) {
+                if inapp.isActive(on: now) {
                     guard let potentialProduct = self.products[inapp.productId] else {
                         throw SubscriptionMonitorError.invalidProduct
                     }
@@ -217,12 +218,6 @@ public class SubscriptionMonitor: NSObject {
         }
         self.activeSubs = activeProducts
         self.receipt = validateReceipt
-        
-        
-    }
-    
-    func isActive(inApp: InAppReceipt) -> Bool {
-        return inApp.expiresDate > Date()
     }
 }
 

@@ -75,4 +75,14 @@ public class InAppReceipt {
         self.isTrialPeriod = trialPeriod
         
     }
+    
+    public func isActive(on: Date) -> Bool {
+        
+        guard self.cancellationDate == nil else {
+            return false
+        }
+        
+        return self.purchaseDate <= on && self.expiresDate > on
+    }
+    
 }
