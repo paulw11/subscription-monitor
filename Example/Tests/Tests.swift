@@ -89,8 +89,11 @@ class Tests: XCTestCase {
                 
             })
             
+            let start=Date()
             
             self.subscriptionMonitor.refreshNow()
+            
+            XCTAssert(start.timeIntervalSince(self.subscriptionMonitor.lastValidationTime!) < 2)
             
             self.waitForExpectations(timeout: 5.0, handler: { (error) in
                 if let error = error {
