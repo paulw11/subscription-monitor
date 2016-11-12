@@ -10,15 +10,38 @@ import Foundation
 
 public class Receipt {
     
+    /**
+     
+     A validated receipt.  Fields are described in the [Receipt Validation Programming Guide](https://developer.apple.com/library/content/releasenotes/General/ValidateAppStoreReceipt/Chapters/ReceiptFields.html#//apple_ref/doc/uid/TP40010573-CH106-SW1)
+     */
+    
+    /// Receipt type, sandbox or production
     public let receiptType: String
+    
+    /// The app’s bundle identifier.
+    /// This corresponds to the value of CFBundleIdentifier in the Info.plist file.
     public let bundleId: String
+    
+    ///This corresponds to the value of CFBundleVersion (in iOS) or CFBundleShortVersionString (in OS X) in the Info.plist file when the purchase was made.
+    ///In the sandbox environment, the value of this field is always “1.0”.
     public let applicationVersion: String
+    
+    /// The date when the app receipt was created.
     public let receiptCreationDate: Date
+    
+    /// The date when the request was made to validate the receipt
     public let requestDate: Date
+    
+    /// For a transaction that restores a previous transaction, the date of the original transaction.
     public let originalPurchaseDate: Date
+    
+    /// The version of the app that was originally purchased.
     public let originalApplicationVersion: String
     
+    /// An array of in-app purchase receipts in this receipt
     public let inApp: [InAppReceipt]?
+    
+    /// The most recent renewal receipt
     public let latestInApp: [InAppReceipt]?
     
     fileprivate let dateFormatter:DateFormatter = {
@@ -30,6 +53,8 @@ public class Receipt {
         return df
     }()
     
+    /// Initialiser
+    /// - Parameter: _ A dictionary that represents the receipt
     public init?(_ receiptJson:[String:Any]) {
         
         guard let receiptDictionary = receiptJson["receipt"] as? [String:Any] else {
