@@ -11,6 +11,9 @@ import StoreKit
 
 public class Product {
     
+    /// Products are used to encapsulate data associated with the in-app-purchases defined in iTunesConnect.
+    
+    
     public enum SubscriptionDuration: Int {
         case week = 7
         case month = 30
@@ -21,17 +24,31 @@ public class Product {
         case perpetual = 9999
     }
     
+    /// The product id - must match iTunesConnect
     public let productID: String
+    
+    /// The product level within its `ProductGroup`
     public let productLevel: Int
+    
+    /// The duration of this product's subscription
     public let duration: SubscriptionDuration
+    
+    /// A reference to the associated `SKProduct`
     public let skProduct: SKProduct?
     
+    /// Indicates if this is free product (read only)
     public var isFree: Bool {
         get {
             return false
         }
     }
     
+    
+    /// Create a new `Product`
+    /// - Parameter productID: The iTunesConnect product ID
+    /// - Parameter productLevel: The product level within its `ProductGroup`
+    /// - Parameter duration: The duration of this product's subscription
+    /// - Parameter skProduct: A reference to the associated `SKProduct`
     public init(productID: String, productLevel: Int, duration: SubscriptionDuration, skProduct: SKProduct? = nil) {
         self.productID = productID
         self.productLevel = productLevel
