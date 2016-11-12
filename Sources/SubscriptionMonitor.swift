@@ -9,11 +9,29 @@
 import Foundation
 import StoreKit
 
-/// SubscriptionMonitor provides details of valid subscriptions
+/**
+ **A framework for monitoring auto renewing subscriptions on iOS**
+ 
+ SubscriptionMonitor automates the tasks required to validate in-app purchase receipts for auto-renewing subscriptions.
+ It will periodically refresh the application receipt and validate it against your server.
+ An NSNotification (and optionally a closure invocation) is used to let your app know that the receipt has been refreshed
+ and that it should check for changes in subscriptions.
+ 
+ */
 
 public class SubscriptionMonitor: NSObject {
     
+    /// A dictionary of `Subscription` objects, keyed by `ProductGroup`
     public typealias Subscriptions = [ProductGroup:Subscription]
+    
+    /// A closure to be invoked when subscriptions are updated
+    ///
+    ///    - Receipt?: The `Receipt` that was validated
+    ///    - Subscriptions?: The `Subscriptions` that are currently active
+    ///    - Error?: The error, if any, that resulted from validating the receipt.
+    ///
+    ///    Note that if you have free products it is possible for both `Subscriptions?` and `Error?` to be non-nil
+    ///
     
     public typealias SubscriptionMonitorCallback = (Receipt?, Subscriptions?, Error?) -> (Void)
     
@@ -27,27 +45,34 @@ public class SubscriptionMonitor: NSObject {
     /// Validate receipts against production or sandbox
     public let useSandbox: Bool
     
-    ///
+    ///The `ReceiptValidator` in use by this `SubscriptionMonitor` instance
     public let validator: ReceiptValidator
     
-    public var lastValidationTime: Date?
+    ///The last time the receipt and active subscriptions were validated
+    fileprivate(set) public var lastValidationTime: Date?
     
+    ///This `Notification` is issued when the subscription information has been refreshed
     public static let SubscriptionMonitorRefreshNotification = Notification.Name("SubscriptionMonitorRefreshNotification")
     
-    public static let versionString = "1.0.0"
     
+    ///The current version of this module
+    public static let versionString = "1.0.6"
+    
+    ///The subscriptions that are currently active
     public var activeSubscriptions: Subscriptions? {
         get {
             return self.activeSubs
         }
     }
     
+    ///The most recent `Receipt` that was validated
     public var latestReceipt: Receipt? {
         get {
             return self.receipt
         }
     }
     
+    ///`true` if time-based receipt refreshing is enabled.  See `startRefreshing`, `stopRefreshing` and `refreshInterval`
     public var isRefreshEnabled: Bool {
         get {
             return self.isRefreshing
@@ -74,14 +99,17 @@ public class SubscriptionMonitor: NSObject {
     
     fileprivate var receiptCallback: SubscriptionMonitorCallback?
     
-    /**
-     initialise
-     
-     - Parameter validationEndpoint: The server URL that is called to validate the receipts
-     - Parameter refreshInterval: The receipt refresh refreshInterval
-     - Parameter useSandbox: `true` if the receipt should be validated against the Apple useSandbox
-     - Returns a new SubscriptionMonitor
-     */
+    ///
+    /// Initialise a new `SubscriptionMonitor`
+    ///
+    /// - Parameters:
+    ///    - validator: The `ReceiptValidator` that isused to validate the receipt
+    ///    - refreshInterval: The receipt refresh refreshInterval
+    ///    - useSandbox: `true` if the receipt should be validated against the Apple sandbox server
+    ///    - receiptProvider: A `ReceiptProvider` object.  By default a `LocalReceiptProvider` is used.
+    ///
+    /// - Returns: A new SubscriptionMonitor
+    
     
     
     public init(validator: ReceiptValidator, refreshInterval: Double = 3600, useSandbox: Bool = false, receiptProvider: ReceiptProvider = LocalReceiptProvider()) {
@@ -92,12 +120,22 @@ public class SubscriptionMonitor: NSObject {
         super.init()
     }
     
+    /// Add the specified `ProductGroup` to this instance
+    ///
+    /// - Parameter productGroup: The `ProductGroup` to be added
+    ///
+    
     public func add(productGroup: ProductGroup) {
         self.productGroups.insert(productGroup)
         for product in productGroup.products {
             self.products[product.productID] = product
         }
     }
+    
+    /// Remove the specified `ProductGroup` from this instance
+    ///
+    /// - Parameter productGroup: The `ProductGroup` to be removed
+    ///
     
     public func remove(productGroup: ProductGroup) {
         for product in productGroup.products {
@@ -106,23 +144,34 @@ public class SubscriptionMonitor: NSObject {
         self.productGroups.remove(productGroup)
     }
     
+    /// Start the periodic refreshing of the subscription information
+    ///
+    
     public func startRefreshing() {
         self.isRefreshing = true
     }
     
+    /// Stop the periodic refreshing of the subscription information
+    ///
     public func stopRefreshing() {
         self.isRefreshing = false
     }
     
+    /// Force a refresh
+    ///
+    /// The refresh timer will be restarted
     public func refreshNow() {
         self.restartTimer()
         self.refreshSubscriptions()
     }
     
+    /// Set the closure that will be invoked after the receipt/subscription update is triggered
+    
     public func setUpdateCallback(_ callback:@escaping SubscriptionMonitorCallback) {
         self.receiptCallback = callback
     }
     
+    /// Remove the callback closure
     public func clearUpdateCallback() {
         self.receiptCallback = nil
     }
@@ -143,6 +192,8 @@ public class SubscriptionMonitor: NSObject {
     }
     
     @objc fileprivate func refreshSubscriptions() {
+        
+        self.lastValidationTime = Date()
         
         self.receiptProvider.getReceipt { (data, error) -> (Void) in
             
