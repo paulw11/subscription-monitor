@@ -3,6 +3,11 @@ SubscriptionMonitor Changelog
 
 # master
 
+# [1.0.6]
+ 
+ - Fixed last receipt date
+ - Added documentation
+
 # [1.0.5]
  
  - Fixed SPM support
