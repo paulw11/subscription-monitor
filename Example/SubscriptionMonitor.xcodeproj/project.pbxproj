@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
+		BB07973F1DD702FC0032CD0B /* changelog.md in Sources */ = {isa = PBXBuildFile; fileRef = BB07973E1DD702FC0032CD0B /* changelog.md */; };
 		BB9D39CC1DD5394900AB136D /* MockReceiptProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB9D39C91DD5394900AB136D /* MockReceiptProvider.swift */; };
 		BB9D39CD1DD5394900AB136D /* MockValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB9D39CA1DD5394900AB136D /* MockValidator.swift */; };
 		BB9D39CE1DD5394900AB136D /* testreceipt.json in Resources */ = {isa = PBXBuildFile; fileRef = BB9D39CB1DD5394900AB136D /* testreceipt.json */; };
@@ -23,6 +24,7 @@
 		69753E97B0D70297AF7BB3FF /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		6ED372A1AE7CC9645C4D07FF /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		927FBABA14E704FB70483E77 /* SubscriptionMonitor.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = SubscriptionMonitor.podspec; path = ../SubscriptionMonitor.podspec; sourceTree = "<group>"; };
+		BB07973E1DD702FC0032CD0B /* changelog.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = changelog.md; path = ../changelog.md; sourceTree = "<group>"; };
 		BB9D39C91DD5394900AB136D /* MockReceiptProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockReceiptProvider.swift; sourceTree = "<group>"; };
 		BB9D39CA1DD5394900AB136D /* MockValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockValidator.swift; sourceTree = "<group>"; };
 		BB9D39CB1DD5394900AB136D /* testreceipt.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = testreceipt.json; sourceTree = "<group>"; };
@@ -103,6 +105,7 @@
 		607FACF51AFB993E008FA782 /* Podspec Metadata */ = {
 			isa = PBXGroup;
 			children = (
+				BB07973E1DD702FC0032CD0B /* changelog.md */,
 				927FBABA14E704FB70483E77 /* SubscriptionMonitor.podspec */,
 				6ED372A1AE7CC9645C4D07FF /* README.md */,
 				69753E97B0D70297AF7BB3FF /* LICENSE */,
@@ -236,6 +239,7 @@
 				607FACEC1AFB9204008FA782 /* Tests.swift in Sources */,
 				BB9D39CC1DD5394900AB136D /* MockReceiptProvider.swift in Sources */,
 				BB9D39CD1DD5394900AB136D /* MockValidator.swift in Sources */,
+				BB07973F1DD702FC0032CD0B /* changelog.md in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -7,33 +7,33 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		009DFD6513C013ACC460EBC887FC3E91 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
-		0B3A2776C0AD837FAA9464F4B87C8134 /* Pods-SubscriptionMonitor_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = BEAAFFB1BFEEE78DE7A6B4E473501D23 /* Pods-SubscriptionMonitor_Tests-dummy.m */; };
-		13FDE1687C19881988C226ABA6954433 /* ReceiptProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B26BD7F8D8C26CCE662C634047C33B48 /* ReceiptProvider.swift */; };
-		5CD01F6BF1A2399C36D27C6E336CDD19 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF3937DC87961394F5113BE23658DB38 /* Product.swift */; };
-		6AB1901C4D63029130E4F25C6D6F3C53 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
-		71D5023FDD8B8E5014ED3D667A3B3EAF /* SubscriptionMonitor-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E6CE8F1BB0AF41484F2D0D20A2398287 /* SubscriptionMonitor-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		73C0644111590335E1F9E19C9AEE66E7 /* ReceiptValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 603D3FC79567A84BB92D8CB6058D7143 /* ReceiptValidator.swift */; };
-		7960B1640FE57AE731F1A9E20DAC42C9 /* SimpleReceiptValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B1A59B1FA826F52F022D334FB4C3E4 /* SimpleReceiptValidator.swift */; };
-		83B48D36F832B91FA9024B8823813F9F /* SubscriptionMonitor.h in Headers */ = {isa = PBXBuildFile; fileRef = 27E9D460527EFA4BC31B65439FE4F376 /* SubscriptionMonitor.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		88DEAAD64BE255B696F0D78223818A6A /* FreeProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 297F2FBAEB18D18547F0C8F193C70EF0 /* FreeProduct.swift */; };
-		89A67C53C4F1743318907771433098F0 /* ProductGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = D41879AD44A4C55DFDA24A27F6038ECD /* ProductGroup.swift */; };
-		8DBE45C1A43A6BB3E38546856AF2729C /* LocalReceiptProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CA0AF40B3A5905D62BD8F7589D190DF /* LocalReceiptProvider.swift */; };
-		B402AC9B8CA2756529678D4418EB7F5D /* Subscription.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC7759E7F80A0435D86E6C12428E44B4 /* Subscription.swift */; };
-		D4287CB693DAFE438CBA681E70484939 /* SubscriptionMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E36BCE7595A68BBD49C0A853E5606CD9 /* SubscriptionMonitor.swift */; };
-		E7D7074F26C82CA3C330564FF0CEABD0 /* Pods-SubscriptionMonitor_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = DB0603E30CEA69F5EB8DFB282DC512E3 /* Pods-SubscriptionMonitor_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E8C472CF1A372077396A5A762DE9972E /* SubscriptionMonitorError.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF232483522FCCF1AF226B8EFC6E6714 /* SubscriptionMonitorError.swift */; };
-		EDC3C6054C72A69A595412D5A6542DF6 /* SubscriptionMonitor-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E7DEF4340E3A0E310552F6061A6F7F31 /* SubscriptionMonitor-dummy.m */; };
-		EEEAE73F7E2A1A3F242C33F01577AEA6 /* Receipt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 657BD180C1264AC1E3C0C6915379D084 /* Receipt.swift */; };
-		FA58C6F8E726906BA8B64D43CD06FFA5 /* InAppReceipt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14852B422BB0201AEF9C2969BC70E4A2 /* InAppReceipt.swift */; };
+		0D3E0808C2D1E5C8775247EAB37E9119 /* SimpleReceiptValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B1A59B1FA826F52F022D334FB4C3E4 /* SimpleReceiptValidator.swift */; };
+		177F4696EB83CEA6C9D693D2B38DBAE9 /* SubscriptionMonitor-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E6CE8F1BB0AF41484F2D0D20A2398287 /* SubscriptionMonitor-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		32C12B157778DDE2E912B41B2B924F25 /* ReceiptValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 603D3FC79567A84BB92D8CB6058D7143 /* ReceiptValidator.swift */; };
+		3EC2F824CF6547E70701C9E708719F48 /* InAppReceipt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14852B422BB0201AEF9C2969BC70E4A2 /* InAppReceipt.swift */; };
+		5439DBC4CED97E65D0EF9A2D50341B03 /* LocalReceiptProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CA0AF40B3A5905D62BD8F7589D190DF /* LocalReceiptProvider.swift */; };
+		5AA44BA1C38F835EA45941BBD60B7712 /* Pods-SubscriptionMonitor_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = DB0603E30CEA69F5EB8DFB282DC512E3 /* Pods-SubscriptionMonitor_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5DEF1EE0726A6CA07B4B9F7606083991 /* SubscriptionMonitor.h in Headers */ = {isa = PBXBuildFile; fileRef = 27E9D460527EFA4BC31B65439FE4F376 /* SubscriptionMonitor.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		606C9E9ED958C5C796CCF67E9F89C7EF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
+		64BC7568E999246ECB638A3CF4B4ED24 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF3937DC87961394F5113BE23658DB38 /* Product.swift */; };
+		6EBC9710D933564BF94D1A836D76632E /* ReceiptProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B26BD7F8D8C26CCE662C634047C33B48 /* ReceiptProvider.swift */; };
+		71B75E67D7A218FED311A0360812DBA3 /* SubscriptionMonitor-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E7DEF4340E3A0E310552F6061A6F7F31 /* SubscriptionMonitor-dummy.m */; };
+		7E3988E34F7CF865706BA2CFB5479826 /* ProductGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = D41879AD44A4C55DFDA24A27F6038ECD /* ProductGroup.swift */; };
+		965EDFDDD64EFC0FD5B9F71B86AD3596 /* SubscriptionMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E36BCE7595A68BBD49C0A853E5606CD9 /* SubscriptionMonitor.swift */; };
+		990FA18CE729E3D5DF4D986F5B1600E1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
+		B0532273FD89FA52B3884A9172B5EAE6 /* Receipt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 657BD180C1264AC1E3C0C6915379D084 /* Receipt.swift */; };
+		BF8A6BB445D3216B4B2E18A8BD226BCD /* FreeProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 297F2FBAEB18D18547F0C8F193C70EF0 /* FreeProduct.swift */; };
+		E2FEE9C0407B5EDB960BB3CD081D66A4 /* Subscription.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC7759E7F80A0435D86E6C12428E44B4 /* Subscription.swift */; };
+		F1BF9E863ACC2125FA0E6004187A150E /* SubscriptionMonitorError.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF232483522FCCF1AF226B8EFC6E6714 /* SubscriptionMonitorError.swift */; };
+		F9363138B30E6C5F2347DF1870B08EC5 /* Pods-SubscriptionMonitor_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = BEAAFFB1BFEEE78DE7A6B4E473501D23 /* Pods-SubscriptionMonitor_Tests-dummy.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		39BD8922B4C0BF71F07B8AAB92019793 /* PBXContainerItemProxy */ = {
+		0BE0EA96F71F59576834E83C7F0B4167 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 35A8B89CACA53793F11C2F666C328516;
+			remoteGlobalIDString = 4CEC00FB6F604AC95C32D9F85F5BAC4C;
 			remoteInfo = SubscriptionMonitor;
 		};
 /* End PBXContainerItemProxy section */
@@ -75,19 +75,19 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		4A3F4105EAD163432FD096E2D55918E1 /* Frameworks */ = {
+		52FEB0D720EED0B171BEAACA47AA5B14 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6AB1901C4D63029130E4F25C6D6F3C53 /* Foundation.framework in Frameworks */,
+				606C9E9ED958C5C796CCF67E9F89C7EF /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		51B58C118CC66D5F8EBB7EC1A09DA736 /* Frameworks */ = {
+		922D0C97B049E0B2CB8CCBE941C72F6C /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				009DFD6513C013ACC460EBC887FC3E91 /* Foundation.framework in Frameworks */,
+				990FA18CE729E3D5DF4D986F5B1600E1 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -211,33 +211,33 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		225B2FC96E6008EEA21CC22CA1299A13 /* Headers */ = {
+		715FD41E95CC0612C3D69C2E5967F7FE /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				71D5023FDD8B8E5014ED3D667A3B3EAF /* SubscriptionMonitor-umbrella.h in Headers */,
-				83B48D36F832B91FA9024B8823813F9F /* SubscriptionMonitor.h in Headers */,
+				5AA44BA1C38F835EA45941BBD60B7712 /* Pods-SubscriptionMonitor_Tests-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		9FB70BA60F5D55ACA516315923228EEA /* Headers */ = {
+		F0155B5189E376FDA55B4A7E30F75BB2 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E7D7074F26C82CA3C330564FF0CEABD0 /* Pods-SubscriptionMonitor_Tests-umbrella.h in Headers */,
+				177F4696EB83CEA6C9D693D2B38DBAE9 /* SubscriptionMonitor-umbrella.h in Headers */,
+				5DEF1EE0726A6CA07B4B9F7606083991 /* SubscriptionMonitor.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		35A8B89CACA53793F11C2F666C328516 /* SubscriptionMonitor */ = {
+		4CEC00FB6F604AC95C32D9F85F5BAC4C /* SubscriptionMonitor */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2E0B1333AC7438A1A8BB794925CA840C /* Build configuration list for PBXNativeTarget "SubscriptionMonitor" */;
+			buildConfigurationList = 3554732E5E6A7442EDCF93F0AF3A4213 /* Build configuration list for PBXNativeTarget "SubscriptionMonitor" */;
 			buildPhases = (
-				413AB505DFCAB0C1CF8BCAA56B4F10E7 /* Sources */,
-				51B58C118CC66D5F8EBB7EC1A09DA736 /* Frameworks */,
-				225B2FC96E6008EEA21CC22CA1299A13 /* Headers */,
+				82FBC519EC4410E46693544BD7ACD8D0 /* Sources */,
+				52FEB0D720EED0B171BEAACA47AA5B14 /* Frameworks */,
+				F0155B5189E376FDA55B4A7E30F75BB2 /* Headers */,
 			);
 			buildRules = (
 			);
@@ -248,18 +248,18 @@
 			productReference = 6A40D735A2B4A435F9CF61151C51062F /* SubscriptionMonitor.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		D2CB4FBD14EE3029D520702D771F52EB /* Pods-SubscriptionMonitor_Tests */ = {
+		64C23986B5F023040F454D6F14BF5D61 /* Pods-SubscriptionMonitor_Tests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = ECD7E76D5205A7D5A7DAD348DBB950BC /* Build configuration list for PBXNativeTarget "Pods-SubscriptionMonitor_Tests" */;
+			buildConfigurationList = 9592FF6A8C318EB7DDA5BE0C2E1D4A6E /* Build configuration list for PBXNativeTarget "Pods-SubscriptionMonitor_Tests" */;
 			buildPhases = (
-				B0C5459E78BED640E6D728AE400BB357 /* Sources */,
-				4A3F4105EAD163432FD096E2D55918E1 /* Frameworks */,
-				9FB70BA60F5D55ACA516315923228EEA /* Headers */,
+				7F678B3ACA4086E5155A169067CE7C0B /* Sources */,
+				922D0C97B049E0B2CB8CCBE941C72F6C /* Frameworks */,
+				715FD41E95CC0612C3D69C2E5967F7FE /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				C6EC22B2D16B3EC3ADB49FD16A92B8B3 /* PBXTargetDependency */,
+				B1D94C4FE02A574813A48396E6F2CFEB /* PBXTargetDependency */,
 			);
 			name = "Pods-SubscriptionMonitor_Tests";
 			productName = "Pods-SubscriptionMonitor_Tests";
@@ -287,54 +287,90 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				D2CB4FBD14EE3029D520702D771F52EB /* Pods-SubscriptionMonitor_Tests */,
-				35A8B89CACA53793F11C2F666C328516 /* SubscriptionMonitor */,
+				64C23986B5F023040F454D6F14BF5D61 /* Pods-SubscriptionMonitor_Tests */,
+				4CEC00FB6F604AC95C32D9F85F5BAC4C /* SubscriptionMonitor */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		413AB505DFCAB0C1CF8BCAA56B4F10E7 /* Sources */ = {
+		7F678B3ACA4086E5155A169067CE7C0B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				88DEAAD64BE255B696F0D78223818A6A /* FreeProduct.swift in Sources */,
-				FA58C6F8E726906BA8B64D43CD06FFA5 /* InAppReceipt.swift in Sources */,
-				8DBE45C1A43A6BB3E38546856AF2729C /* LocalReceiptProvider.swift in Sources */,
-				5CD01F6BF1A2399C36D27C6E336CDD19 /* Product.swift in Sources */,
-				89A67C53C4F1743318907771433098F0 /* ProductGroup.swift in Sources */,
-				EEEAE73F7E2A1A3F242C33F01577AEA6 /* Receipt.swift in Sources */,
-				13FDE1687C19881988C226ABA6954433 /* ReceiptProvider.swift in Sources */,
-				73C0644111590335E1F9E19C9AEE66E7 /* ReceiptValidator.swift in Sources */,
-				7960B1640FE57AE731F1A9E20DAC42C9 /* SimpleReceiptValidator.swift in Sources */,
-				B402AC9B8CA2756529678D4418EB7F5D /* Subscription.swift in Sources */,
-				EDC3C6054C72A69A595412D5A6542DF6 /* SubscriptionMonitor-dummy.m in Sources */,
-				D4287CB693DAFE438CBA681E70484939 /* SubscriptionMonitor.swift in Sources */,
-				E8C472CF1A372077396A5A762DE9972E /* SubscriptionMonitorError.swift in Sources */,
+				F9363138B30E6C5F2347DF1870B08EC5 /* Pods-SubscriptionMonitor_Tests-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B0C5459E78BED640E6D728AE400BB357 /* Sources */ = {
+		82FBC519EC4410E46693544BD7ACD8D0 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0B3A2776C0AD837FAA9464F4B87C8134 /* Pods-SubscriptionMonitor_Tests-dummy.m in Sources */,
+				BF8A6BB445D3216B4B2E18A8BD226BCD /* FreeProduct.swift in Sources */,
+				3EC2F824CF6547E70701C9E708719F48 /* InAppReceipt.swift in Sources */,
+				5439DBC4CED97E65D0EF9A2D50341B03 /* LocalReceiptProvider.swift in Sources */,
+				64BC7568E999246ECB638A3CF4B4ED24 /* Product.swift in Sources */,
+				7E3988E34F7CF865706BA2CFB5479826 /* ProductGroup.swift in Sources */,
+				B0532273FD89FA52B3884A9172B5EAE6 /* Receipt.swift in Sources */,
+				6EBC9710D933564BF94D1A836D76632E /* ReceiptProvider.swift in Sources */,
+				32C12B157778DDE2E912B41B2B924F25 /* ReceiptValidator.swift in Sources */,
+				0D3E0808C2D1E5C8775247EAB37E9119 /* SimpleReceiptValidator.swift in Sources */,
+				E2FEE9C0407B5EDB960BB3CD081D66A4 /* Subscription.swift in Sources */,
+				71B75E67D7A218FED311A0360812DBA3 /* SubscriptionMonitor-dummy.m in Sources */,
+				965EDFDDD64EFC0FD5B9F71B86AD3596 /* SubscriptionMonitor.swift in Sources */,
+				F1BF9E863ACC2125FA0E6004187A150E /* SubscriptionMonitorError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		C6EC22B2D16B3EC3ADB49FD16A92B8B3 /* PBXTargetDependency */ = {
+		B1D94C4FE02A574813A48396E6F2CFEB /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = SubscriptionMonitor;
-			target = 35A8B89CACA53793F11C2F666C328516 /* SubscriptionMonitor */;
-			targetProxy = 39BD8922B4C0BF71F07B8AAB92019793 /* PBXContainerItemProxy */;
+			target = 4CEC00FB6F604AC95C32D9F85F5BAC4C /* SubscriptionMonitor */;
+			targetProxy = 0BE0EA96F71F59576834E83C7F0B4167 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		30D022BE9981A0D2CDF4566FECB18E38 /* Release */ = {
+		055EEBF3F6814A7E86CFFF0644E4485B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BC15930F042703FAD985BB47A8E62499 /* Pods-SubscriptionMonitor_Tests.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-SubscriptionMonitor_Tests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-SubscriptionMonitor_Tests/Pods-SubscriptionMonitor_Tests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_SubscriptionMonitor_Tests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		094DEDE07245058B938596EF1EE22376 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = C3C9B6005BBC7A897F461CCA0AC95FDC /* SubscriptionMonitor.xcconfig */;
 			buildSettings = {
@@ -406,47 +442,12 @@
 				ONLY_ACTIVE_ARCH = YES;
 				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
 				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_VERSION = "";
 				SYMROOT = "${SRCROOT}/../build";
 			};
 			name = Debug;
 		};
-		73349F57EE3F3302D6E22E413706ABAA /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = BC15930F042703FAD985BB47A8E62499 /* Pods-SubscriptionMonitor_Tests.release.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-SubscriptionMonitor_Tests/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-SubscriptionMonitor_Tests/Pods-SubscriptionMonitor_Tests.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_SubscriptionMonitor_Tests;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		A4F3C2D8D18CA7EC348E94B34B2083FA /* Debug */ = {
+		7ADB010ACDC34CAB7BCDA067D6DABCAC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 4FFB887CC116244841A3812DA87BBAA9 /* Pods-SubscriptionMonitor_Tests.debug.xcconfig */;
 			buildSettings = {
@@ -518,12 +519,13 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
 				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_VERSION = "";
 				SYMROOT = "${SRCROOT}/../build";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
-		CA387A49FB6D9A2D0C29491925C62006 /* Debug */ = {
+		BB998871A2B6282593E3BE10BD75FBFB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = C3C9B6005BBC7A897F461CCA0AC95FDC /* SubscriptionMonitor.xcconfig */;
 			buildSettings = {
@@ -568,20 +570,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2E0B1333AC7438A1A8BB794925CA840C /* Build configuration list for PBXNativeTarget "SubscriptionMonitor" */ = {
+		3554732E5E6A7442EDCF93F0AF3A4213 /* Build configuration list for PBXNativeTarget "SubscriptionMonitor" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				CA387A49FB6D9A2D0C29491925C62006 /* Debug */,
-				30D022BE9981A0D2CDF4566FECB18E38 /* Release */,
+				BB998871A2B6282593E3BE10BD75FBFB /* Debug */,
+				094DEDE07245058B938596EF1EE22376 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		ECD7E76D5205A7D5A7DAD348DBB950BC /* Build configuration list for PBXNativeTarget "Pods-SubscriptionMonitor_Tests" */ = {
+		9592FF6A8C318EB7DDA5BE0C2E1D4A6E /* Build configuration list for PBXNativeTarget "Pods-SubscriptionMonitor_Tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				A4F3C2D8D18CA7EC348E94B34B2083FA /* Debug */,
-				73349F57EE3F3302D6E22E413706ABAA /* Release */,
+				7ADB010ACDC34CAB7BCDA067D6DABCAC /* Debug */,
+				055EEBF3F6814A7E86CFFF0644E4485B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
