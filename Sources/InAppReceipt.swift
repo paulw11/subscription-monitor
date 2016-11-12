@@ -8,17 +8,47 @@
 
 import Foundation
 
+/**
+ 
+ An InApp purchase from a validated receipt.  Fields are described in the [Receipt Validation Programming Guide](https://developer.apple.com/library/content/releasenotes/General/ValidateAppStoreReceipt/Chapters/ReceiptFields.html#//apple_ref/doc/uid/TP40010573-CH106-SW1)
+ */
+
 public class InAppReceipt {
     
+    /// This value corresponds to the quantity property of the `SKPayment` object stored in the transaction’s `payment` property.
     public let quantity: Int
+    
+    /// This value corresponds to the productIdentifier property of the `SKPayment` object stored in the transaction’s `payment` property
     public let productId: String
+    
+    /// This value corresponds to the transaction’s `transactionIdentifier` property.
+    
     public let transactionId: String
+    
+    /// This value corresponds to the original transaction’s `transactionIdentifier` property.
+    /// All receipts in a chain of renewals for an auto-renewable subscription have the same value for this field.
     public let originalTransactionId: String
-    public let purchaseDate: Date
+    
+    /// This value corresponds to the original transaction’s `transactionDate` property.
+    /// In an auto-renewable subscription receipt, this indicates the beginning of the subscription period, even if the subscription has been renew
     public let originalPurchaseDate: Date
+    
+    /// This value corresponds to the transaction’s `transactionDate` property.
+    /// For a transaction that restores a previous transaction, the purchase date is the same as the original purchase date. Use `originalPurchaseDate` to get the date of the original transaction.
+    /// In an auto-renewable subscription receipt, this is always the date when the subscription was purchased or renewed, regardless of whether the transaction has been restored.
+    public let purchaseDate: Date
+    
+    ///T he expiration date for the subscription
     public let expiresDate: Date
+    
+    /// The primary key for identifying subscription purchases.
     public let webOrderLine: String
+    
+    /// Indicates whether this subscription is in the trial period
     public let isTrialPeriod: Bool
+    
+    /// For a transaction that was canceled by Apple customer support, the time and date of the cancellation.
+    /// Treat a canceled receipt the same as if no purchase had ever been made.
     public let cancellationDate: Date?
     
     fileprivate let expirationDateFormatter:DateFormatter = {
@@ -50,7 +80,7 @@ public class InAppReceipt {
             let expiresDate = self.expirationDateFormatter.date(from: expiresDateStr),
             let trialPeriod = Bool(trialPeriodStr),
             let quantity = Int(quantityStr)
-        else {
+            else {
                 return nil
         }
         
