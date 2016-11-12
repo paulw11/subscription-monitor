@@ -106,6 +106,11 @@ public class InAppReceipt {
         
     }
     
+    /// Check if this purchase was 'active' on the given date.
+    /// It is active if it isn't cancelled, it was purchased before the given date and expires after the given date
+    /// - Parameter on: The date on which to check for validity
+    /// - Return: `true` if the purchase was active on the given date
+    
     public func isActive(on: Date) -> Bool {
         
         guard self.cancellationDate == nil else {
