@@ -4,9 +4,7 @@
 [![Version](https://img.shields.io/cocoapods/v/SubscriptionMonitor.svg?style=flat)](http://cocoapods.org/pods/SubscriptionMonitor)
 [![License](https://img.shields.io/cocoapods/l/SubscriptionMonitor.svg?style=flat)](http://cocoapods.org/pods/SubscriptionMonitor)
 [![Platform](https://img.shields.io/cocoapods/p/SubscriptionMonitor.svg?style=flat)](http://cocoapods.org/pods/SubscriptionMonitor)
-[![GitHub stars](https://img.shields.io/github/stars/badges/shields.svg?style=social&label=Star)](http://github.com/paulw11/subscription-monitor)
-[![GitHub watchers](https://img.shields.io/github/watchers/badges/shields.svg?style=social&label=Watch)](https://github.com/paulw11/subscription-monitor)
-[![GitHub followers](https://img.shields.io/github/followers/espadrine.svg?style=social&label=Follow)](http://github.com/paulw11/subscription-monitor)
+[![GitHub stars](https://img.shields.io/github/stars/paulw11/subscription-monitor.svg)](https://github.com/paulw11/subscription-monitor/stargazers)
 
 **A framework for monitoring auto renewing subscriptions on iOS**
 
