@@ -36,6 +36,24 @@ class Tests: XCTestCase {
         super.tearDown()
     }
     
+    func testProduct() {
+        
+        var productSet = Set<Product>()
+        
+        let product1 = Product(productID: "product1", productLevel: 1, duration: .month)
+        let product1a = Product(productID: "product1", productLevel: 1, duration: .month)
+        let product2 = Product(productID: "product1", productLevel: 1, duration: .week)
+        
+        productSet.insert(product1)
+        productSet.insert(product1a)
+        productSet.insert(product2)
+        
+        XCTAssert(productSet.count == 2)
+        XCTAssert(productSet.contains(product1))
+        XCTAssert(productSet.contains(product2))
+        
+    }
+    
     func testProductGroup() {
         
         let products = self.productGroup.products
@@ -51,6 +69,19 @@ class Tests: XCTestCase {
         XCTAssert(p1.duration == .twoMonths)
         XCTAssert(p2.duration == .month)
         XCTAssert(p3.duration == .year)
+        
+        var productGroupSet = Set<ProductGroup>()
+        
+        productGroupSet.insert(self.productGroup)
+        let secondGroup = ProductGroup(name: self.productGroup.name)
+        let thirdGroup = ProductGroup(name: "Third group")
+        
+        productGroupSet.insert(secondGroup)
+        productGroupSet.insert(thirdGroup)
+        
+        XCTAssert(productGroupSet.count == 2)
+        XCTAssert(productGroupSet.contains(self.productGroup))
+        XCTAssert(productGroupSet.contains(thirdGroup))
         
     }
     
