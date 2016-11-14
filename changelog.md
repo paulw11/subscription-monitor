@@ -3,6 +3,7 @@ SubscriptionMonitor Changelog
 
 # master
 
+# [1.0.7]
  - Fix `Product` hashing
  - Included additional tests for `ProductGroup` and `Product`
 
