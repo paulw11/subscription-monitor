@@ -3,6 +3,9 @@ SubscriptionMonitor Changelog
 
 # master
 
+ - Fix `Product` hashing
+ - Included additional tests for `ProductGroup` and `Product`
+
 # [1.0.6]
  
  - Fixed last receipt date
