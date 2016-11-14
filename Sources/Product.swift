@@ -59,11 +59,11 @@ public class Product {
 
 extension Product: Hashable {
     public var hashValue: Int {
-        return self.productID.hashValue
+        return self.productID.hashValue ^ self.productLevel ^ self.duration.rawValue
     }
     
     public static func == (lhs: Product, rhs: Product) -> Bool {
-        return lhs.productID == rhs.productID
+        return (lhs.productID == rhs.productID && lhs.productLevel == rhs.productLevel && lhs.duration == rhs.duration)
     }
     
 }
