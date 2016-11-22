@@ -56,7 +56,7 @@ public class SubscriptionMonitor: NSObject {
     
     
     ///The current version of this module
-    public static let versionString = "1.0.7"
+    public static let versionString = "1.0.8"
     
     ///The subscriptions that are currently active
     public var activeSubscriptions: Subscriptions? {
