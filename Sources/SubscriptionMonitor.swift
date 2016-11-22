@@ -176,6 +176,20 @@ public class SubscriptionMonitor: NSObject {
         self.receiptCallback = nil
     }
     
+    /// Determine active subscriptions from the current receipt at a specific time:
+    /// - Parameter at: The `Date` at which to determine active subscriptions
+    /// - Returns: `Subscriptions`, if any, that were active at that time
+    public func activeSubscriptions(at: Date) -> Subscriptions? {
+        
+        do {
+            return try self.process(self.receipt, at: at)
+        }
+        catch {
+            return nil
+        }
+        
+    }
+    
     /**
      Restart the refresh Timer
      */
@@ -199,7 +213,7 @@ public class SubscriptionMonitor: NSObject {
             
             self.activeSubs = nil
             do {
-                try self.process(nil)   // There may be free active products
+                self.activeSubs = try self.process(nil, at:Date())   // There may be free active products
             } catch {}
             
             guard error == nil, let receiptData = data else {
@@ -221,7 +235,8 @@ public class SubscriptionMonitor: NSObject {
                 self.receipt = nil
                 
                 do {
-                    try self.process(validatedReceipt)
+                    try self.activeSubs = self.process(validatedReceipt, at:Date())
+                    self.receipt = validatedReceipt
                     self.receiptCallback?(self.receipt,self.activeSubs,nil)
                     NotificationCenter.default.post(name: SubscriptionMonitor.SubscriptionMonitorRefreshNotification, object: self, userInfo: self.notificationDictionary(error: nil, receipt: self.receipt, subscriptions: self.activeSubs))
                 } catch {
@@ -235,7 +250,7 @@ public class SubscriptionMonitor: NSObject {
         }
     }
     
-    func process(_ validateReceipt:Receipt?) throws {
+    private func process(_ validateReceipt:Receipt?, at: Date) throws -> Subscriptions {
         
         var productsDict = [String:ProductGroup]()
         
@@ -251,9 +266,8 @@ public class SubscriptionMonitor: NSObject {
         }
         
         if let latestInApp = validateReceipt?.latestInApp {
-            let now = Date()
             for inapp in latestInApp {
-                if inapp.isActive(on: now) {
+                if inapp.isActive(on: at) {
                     guard let potentialProduct = self.products[inapp.productId] else {
                         throw SubscriptionMonitorError.invalidProduct
                     }
@@ -271,8 +285,7 @@ public class SubscriptionMonitor: NSObject {
                 }
             }
         }
-        self.activeSubs = activeProducts
-        self.receipt = validateReceipt
+        return activeProducts
     }
     
     func notificationDictionary(error: Error?, receipt: Receipt?, subscriptions: Subscriptions?) -> [String: Any] {

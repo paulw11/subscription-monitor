@@ -148,6 +148,21 @@ class Tests: XCTestCase {
                 NotificationCenter.default.removeObserver(self)
             })
             
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss VV"
+            
+            
+            if let thePast = dateFormatter.date(from: "2016-09-11 12:11:00 Etc/GMT") {
+                if let activeProducts = self.subscriptionMonitor.activeSubscriptions(at:thePast) {
+                    XCTAssert(activeProducts.count == 2,"Expected two active products")
+                    XCTAssert(activeProducts[self.freeProductGroup]?.product.productID == "freeProduct")
+                    XCTAssert(activeProducts[self.productGroup]?.product.productID == "product1")
+                } else {
+                    XCTFail("Expected active products")
+                }
+            } else {
+                XCTFail()
+            }
             
             if validator.read(receiptFile: "badtestreceipt") {
                 expectation = self.expectation(description: "Bad Receipt validation")
