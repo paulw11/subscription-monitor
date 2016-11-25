@@ -17,7 +17,7 @@ and that it should check for changes in subscriptions.
 
 * Pluggable architecture allows you to define your own receipt validation class
 * Support for sandbox and production receipt validation
-* Support for "free" products; enable base functionality that can be overridden by subscriptions using in a consistent manner
+* Support for "free" products; enable base functionality that can be overridden by paid subscriptions allowing you to enable functions in a consistent manner
 
 ## Requirements
 SubscriptionMonitor supports iOS 9 and above. Your project must be written in Swift 3 in order to integrate SubscriptionMonitor.
