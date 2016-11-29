@@ -9,14 +9,16 @@
 import Foundation
 import StoreKit
 
+/** Products are used to encapsulate data associated with the in-app-purchases defined in iTunesConnect.
+ - Authors: Paul Wilkinson
+ */
+
+
 public class Product {
     
-    /// Products are used to encapsulate data associated with the in-app-purchases defined in iTunesConnect.
-    /// - Authors: Paul Wilkinson
-    
-    
-    
-    /// Subscription durations
+    /**
+    Subscription durations
+    */
     public enum SubscriptionDuration: Int {
         /// 7 day subscription duration
         case week = 7
