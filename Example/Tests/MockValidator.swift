@@ -36,7 +36,7 @@ class MockValidator: ReceiptValidator {
                 if let jsonObject = try JSONSerialization.jsonObject(with: jsonData, options: []) as? [String:Any] {
                     if let status = jsonObject["status"] as? Int {
                         if status == 0 {
-                            if let receipt = Receipt(jsonObject) {
+                            if let receipt = Receipt(json: jsonObject) {
                                 self.receipt = receipt
                                 return true
                             }
