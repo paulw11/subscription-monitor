@@ -13,6 +13,8 @@ public class Receipt {
     /**
      
      A validated receipt.  Fields are described in the [Receipt Validation Programming Guide](https://developer.apple.com/library/content/releasenotes/General/ValidateAppStoreReceipt/Chapters/ReceiptFields.html#//apple_ref/doc/uid/TP40010573-CH106-SW1)
+     
+      - Authors: Paul Wilkinson
      */
     
     /// Receipt type, sandbox or production
@@ -53,9 +55,11 @@ public class Receipt {
         return df
     }()
     
-    /// Initialiser
-    /// - Parameter: _ A dictionary that represents the receipt
-    public init?(_ receiptJson:[String:Any]) {
+/**
+ Initialise receipt with a JSON representation
+ - parameter json: A dictionary that represents the receipt
+ */
+    public init?(json receiptJson:[String:Any]) {
         
         guard let receiptDictionary = receiptJson["receipt"] as? [String:Any] else {
             return nil

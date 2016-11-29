@@ -8,19 +8,40 @@
 
 import Foundation
 
+/** SimpleReceiptValidator implements the `ReceiptValidator` protocol.
+    It passes the receipt data to a server for validation.
+    The server contacts the Apple receipt validation service and simply returns the result as JSON 
+    to the validator
+*/
+ 
 
 public class SimpleReceiptValidator: ReceiptValidator {
     
-    let serverBase: String
-    let targetBundle: String
+    /// The base address for the validation web service in the form 'https://server.domain/pathToScript.php'
+    fileprivate let serverBase: String
     
+    /// The application bundle that should be in the receipt
+    fileprivate let targetBundle: String
     
+    /// Initialise an instance `SimpleReceiptValidator`
+    /// - parameter serverBase: The base address for the validation web service in the form 'https://server.domain/pathToScript.php'
+    /// - parameter targetBundle: The application bundle that should be in the receipt
     public init(serverBase: String, targetBundle: String) {
         self.serverBase = serverBase
         self.targetBundle = targetBundle
     }
     
-    public func validate(receipt: Data, forSubscriptionMonitor monitor: SubscriptionMonitor, completion: @escaping (Receipt?, Error?) -> (Void)) {
+    /**
+     Validate raw receipt data and return a valid `Receipt` or `Error` via the completion handler
+     
+     - parameter receipt: The raw receipt data that was retrieved from a `ReceiptProvider`
+     - parameter forSubscriptionMonitor: The `SubscriptionMonitor` instance that is making this request
+     - parameter completion: The `ValidationHandler` closure to be invoked with the validation result
+       - parameter receipt: The `Receipt` that was parsed and validated
+       - parameter error: The error, if any, that resulted from attempting to validate the receipt data.
+     */
+
+    public func validate(receipt: Data, forSubscriptionMonitor monitor: SubscriptionMonitor, completion: @escaping (_ receipt:Receipt?, _ error:Error?) -> (Void)) {
         
         let base64Receipt = receipt.base64EncodedString().replacingOccurrences(of: "+", with: "%2B")
         
@@ -50,7 +71,7 @@ public class SimpleReceiptValidator: ReceiptValidator {
                     if let json = try JSONSerialization.jsonObject(with: jsonData, options: []) as? [String:AnyObject] {
                         if let status = json["status"] as? Int {
                             if status == 0 {
-                                    if let receipt = Receipt(json) {
+                                    if let receipt = Receipt(json: json) {
                                         if receipt.bundleId == self.targetBundle {
                                             completion(receipt,nil)
                                         } else {

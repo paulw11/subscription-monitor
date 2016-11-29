@@ -11,6 +11,8 @@ import Foundation
 /**
  
  An InApp purchase from a validated receipt.  Fields are described in the [Receipt Validation Programming Guide](https://developer.apple.com/library/content/releasenotes/General/ValidateAppStoreReceipt/Chapters/ReceiptFields.html#//apple_ref/doc/uid/TP40010573-CH106-SW1)
+ 
+ - Authors: Paul Wilkinson
  */
 
 public class InAppReceipt {

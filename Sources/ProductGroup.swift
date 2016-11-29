@@ -12,6 +12,7 @@ public class ProductGroup {
     
     /// ProductGroups are used to contain related products. User's can upgrade/downgrade/crossgrade based on the product
     /// level within the group.
+    /// - Authors: Paul Wilkinson
     
     /// The group name
     public let name: String

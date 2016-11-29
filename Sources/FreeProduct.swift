@@ -12,7 +12,9 @@ import StoreKit
 /**
  
  Represents a "free" product.  Free products have a perpetual duration.  They must have a `productID`
- but unlike a `Product` this does not have to exist in iTunesConnect
+ but unlike a `Product` this does not have to exist in iTunesConnect.
+ 
+ - Authors: Paul Wilkinson
  */
 
 public class FreeProduct: Product {
