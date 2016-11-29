@@ -3,6 +3,9 @@ SubscriptionMonitor Changelog
 
 # master
 
+# [1.0.9]
+ - Updated documentation
+
 # [1.0.8]
  - Add ability to check active subscriptoions on a given date. Fix #1
 
