@@ -70,8 +70,11 @@ public class Product {
 }
 
 extension Product: Hashable {
-    public var hashValue: Int {
-        return self.productID.hashValue ^ self.productLevel ^ self.duration.rawValue
+    
+    public func hash(into hasher: inout Hasher) {
+        hasher.combine(self.productID)
+        hasher.combine(self.productLevel)
+        hasher.combine(self.duration)
     }
     
     public static func == (lhs: Product, rhs: Product) -> Bool {
