@@ -30,6 +30,7 @@ It will periodically refresh the application receipt and validate it against you
   # s.social_media_url = 'https://twitter.com/paulwilko'
 
   s.ios.deployment_target = '9.0'
+  s.swift_version = '4.2'
 
   s.source_files = 'Sources/**/*'
   
