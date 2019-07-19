@@ -4,6 +4,9 @@ SubscriptionMonitor Changelog
 # master
 
 # [1.0.9]
+ - Update to Swift 4.2
+
+# [1.0.9]
  - Updated documentation
 
 # [1.0.8]
