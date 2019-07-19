@@ -41,10 +41,10 @@ public class Receipt {
     public let originalApplicationVersion: String
     
     /// An array of in-app purchase receipts in this receipt
-    public let inApp: [InAppReceipt]?
+    public var inApp: [InAppReceipt]?
     
     /// The most recent renewal receipt
-    public let latestInApp: [InAppReceipt]?
+    public var latestInApp: [InAppReceipt]?
     
     fileprivate let dateFormatter:DateFormatter = {
         let df = DateFormatter()
